@@ -1,0 +1,1725 @@
+from tkinter import *
+import tkinter.messagebox as messageBox
+import mysql.connector
+from tkinter import filedialog
+root=Tk()
+
+#========================================================================FUNCTIONS===========================================================================
+
+mydb =mysql.connector.connect(host="localhost", user="root", passwd="")
+mycursor =mydb.cursor()
+
+
+mycursor.execute("")
+
+
+#====================================================================================================================================================
+#==========================================================DEFINING VARIABLES GLOBALLY===============================================================
+#====================================================================================================================================================
+var1=StringVar()
+var2=StringVar()
+var3=StringVar()
+var4=StringVar()
+var5=StringVar()
+var6=StringVar()
+var7=StringVar()
+var8=StringVar()
+var9=StringVar()
+var10=StringVar()
+var11=StringVar()
+var12=StringVar()
+var13=StringVar()
+var14=StringVar()
+var15=StringVar()
+var16=StringVar()
+var17=StringVar()
+var18=StringVar()
+var19=StringVar()
+var20=StringVar()
+var21=StringVar()
+var22=StringVar()
+var23=StringVar()
+var24=StringVar()
+var25=StringVar()
+var26=StringVar()
+var27=StringVar()
+var28=StringVar()
+var29=StringVar()
+var30=StringVar()
+var31=StringVar()
+var32=StringVar()
+var33=StringVar()
+var34=StringVar()
+var35=StringVar()
+var36=StringVar()
+var37=StringVar()
+var38=StringVar()
+var39=StringVar()
+var40=StringVar()
+var41=StringVar()
+var42=StringVar()
+var43=StringVar()
+var44=StringVar()
+var45=StringVar()
+var46=StringVar()
+var47=StringVar()
+var48=StringVar()
+var49=StringVar()
+var50=StringVar()
+var51=StringVar()
+var52=StringVar()
+var53=StringVar()
+var54=StringVar()
+var55=StringVar()
+var56=StringVar()
+var57=StringVar()
+var58=StringVar()
+var59=StringVar()
+var60=StringVar()
+var61=StringVar()
+var62=StringVar()
+var63=StringVar()
+var64=StringVar()
+var65=StringVar()
+var66=StringVar()
+var67=StringVar()
+var68=StringVar()
+var69=StringVar()
+var70=StringVar()
+var71=StringVar()
+var72=StringVar()
+var73=StringVar()
+var74=StringVar()
+var75=StringVar()
+var76=StringVar()
+var77=StringVar()
+var78=StringVar()
+var79=StringVar()
+var80=StringVar()
+var81=StringVar()
+var82=StringVar()
+var83=StringVar()
+var84=StringVar()
+var85=StringVar()
+var86=StringVar()
+var87=StringVar()
+var88=StringVar()
+var89=StringVar()
+var90=StringVar()
+var91=StringVar()
+var92=StringVar()
+var93=StringVar()
+var94=StringVar()
+var95=StringVar()
+var96=StringVar()
+var97=StringVar()
+var98=StringVar()
+var99=StringVar()
+var100=StringVar()
+var101=StringVar()
+
+#=======================================================================FRAMES=========================================================================
+f1=Frame(root, width=250, height=750, bg="gray", relief=SUNKEN , bd=3)
+f1.pack(side=LEFT)
+
+f2=Frame(root, width=2000, height=70, bg="gray", relief=SUNKEN , bd=3)
+f2.pack(side=TOP)
+
+
+
+
+#=============================================================SCROLL BAR====================================================================================
+#scrollbar=Scrollbar(root)
+#scrollbar.pack(side=RIGHT,fill=Y)
+root.geometry("{0}x{1}".format(root.winfo_screenwidth(),root.winfo_screenheight()))
+
+root.config(background="#98c4ed")
+root.title("HAMGAM_E_RAST MODEL SCHOOLs")
+
+#=======================================================================MAIN PAGE HEADINGS================================================================
+#labelfont=('arial', 50, 'bold')
+#widget=Label(root, text="HAMGAM-E-RAST MODEL SCHOOL")
+#widget.config(bg="black", fg="white")
+#widget.config(font=labelfont)
+#widget.config(height=2, width=50)
+#widget.pack(expand=NO , fill=NONE)
+
+
+'''label_one=Label(root, text="SCHOOL", font=('arial', 50, 'bold'), fg="black", bg="#98c4ed")
+label_one.place(x=590,y=200)
+label_one=Label(root, text="MANAGEMENT", font=('arial', 50, 'bold'), fg="black", bg="#98c4ed")
+label_one.place(x=495,y=300)
+label_one=Label(root, text="SYSTEM", font=('arial', 50, 'bold'), fg="black", bg="#98c4ed")
+label_one.place(x=590,y=400)'''
+
+label_two=Label(root, text="SCHOOL MANAGEMENT SYSTEM", font=('arial', 20, 'bold'), fg="black", bg="gray", width=40, bd=5)
+label_two.place(x=400,y=20)
+#label_two=Label(root, text="DASHBOARD", font=('arial', 20, 'bold'), fg="white", bg="black")
+#label_two.place(x=30,y=20)
+#label_two=Label(root, text="----------------------", font=('arial', 20, 'bold'), fg="white", bg="black")
+#label_two.place(x=10,y=50)
+#=================================================================TRANSPORTATION====================================================================
+def btn_1():
+    page1=Tk()
+    page1.geometry("1350x750")
+    page1.title("student registration form")
+    page1.config(background="#98c4ed")
+    
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page1, text="TRANSPORTATION")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+    f3=Frame(page1, width=400, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=200,y=150)
+
+    f4=Frame(page1, width=400, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f4.place(x=800,y=150)
+
+    lab1=Label(f3, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+    lab1.place(x=50,y=100)
+    ent1=Entry(f3,textvar=var1)
+    ent1.place(x=190,y=100)
+
+    lab2=Label(f3, text="student id", fg="black", bg="gray", compound=LEFT)
+    lab2.place(x=50,y=150)
+    ent2=Entry(f3,textvar=var2)
+    ent2.place(x=190,y=150)
+
+    lab3=Label(f3, text="student name", fg="black", bg="gray", compound=LEFT)
+    lab3.place(x=50,y=200)
+    ent3=Entry(f3,textvar=var3)
+    ent3.place(x=190,y=200)
+
+    lab4=Label(f3, text="driver name", fg="black", bg="gray", compound=LEFT)
+    lab4.place(x=50,y=250)
+    ent4=Entry(f3,textvar=var4)
+    ent4.place(x=190,y=250)
+
+    lab5=Label(f3, text="driver phone", fg="black", bg="gray", compound=LEFT)
+    lab5.place(x=50,y=300)
+    ent5=Entry(f3,textvar=var5)
+    ent5.place(x=190,y=300)
+
+    lab6=Label(f3, text="location", fg="black", bg="gray", compound=LEFT)
+    lab6.place(x=50,y=350)
+    ent6=Entry(f3,textvar=var6)
+    ent6.place(x=190,y=350)
+
+    lab7=Label(f3, text="session", fg="black", bg="gray", compound=LEFT)
+    lab7.place(x=50,y=400)
+    ent7=Entry(f3,textvar=var7)
+    ent7.place(x=190,y=400)
+
+    btn1=Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=270, y=440)
+
+
+    
+
+    lab15=Label(f3, text="STUDENT", bg="black", fg="white", font=("arial", 20, "bold"),width=20, height=1)
+    lab15.place(x=20,y=20)
+    
+    lab16=Label(f4, text="TEACHER", bg="black", fg="white", font=("arial", 20, "bold"),width=20, height=1 )
+    lab16.place(x=20,y=20)
+
+
+    lab8=Label(f4, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+    lab8.place(x=50,y=100)
+    ent8=Entry(f4,textvar=var8)
+    ent8.place(x=190,y=100)
+
+    lab9=Label(f4, text="teacher id", fg="black", bg="gray", compound=LEFT)
+    lab9.place(x=50,y=150)
+    ent9=Entry(f4,textvar=var9)
+    ent9.place(x=190,y=150)
+
+    lab10=Label(f4, text="teacher name", fg="black", bg="gray", compound=LEFT)
+    lab10.place(x=50,y=200)
+    ent10=Entry(f4,textvar=var10)
+    ent10.place(x=190,y=200)
+
+    lab11=Label(f4, text="driver name", fg="black", bg="gray", compound=LEFT)
+    lab11.place(x=50,y=250)
+    ent11=Entry(f4,textvar=var11)
+    ent11.place(x=190,y=250)
+
+    lab12=Label(f4, text="driver phone", fg="black", bg="gray", compound=LEFT)
+    lab12.place(x=50,y=300)
+    ent12=Entry(f4,textvar=var12)
+    ent12.place(x=190,y=300)
+
+    lab13=Label(f4, text="location", fg="black", bg="gray", compound=LEFT)
+    lab13.place(x=50,y=350)
+    ent13=Entry(f4,textvar=var13)
+    ent13.place(x=190,y=350)
+
+    lab14=Label(f4, text="session", fg="black", bg="gray", compound=LEFT)
+    lab14.place(x=50,y=400)
+    ent14=Entry(f4,textvar=var14)
+    ent14.place(x=190,y=400)
+
+    btn1=Button(f4, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=270, y=440)
+    
+    
+
+    
+
+
+    
+    
+button1=Button(f1, text="transportation", width=20, height=0, fg="black", bg="#98c4ed", bd=3,  command=btn_1)
+button1.place(x=40,y=90)
+#===============================================================STUDENT REGISTRATION========================================================================
+def btn_2():
+    page2=Tk()
+    page2.geometry("1350x750")
+    page2.title("sSTUDENT REGISTRATION FORM")
+    page2.config(background="#98c4ed")
+
+    
+    
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page2, text="STUDENT REGISTRATION")
+    widget.config(fg="black", bg="gray")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+    
+    lab1=Label(page2,text="student id", fg="black", bg="#98c4ed")
+    lab1.place(x=30,y=135)
+    ent1=Entry(page2,textvar=var15)
+    ent1.place(x=200,y=140)
+
+
+    lab4=Label(page2,text="student name", fg="black", bg="#98c4ed")
+    lab4.place(x=30,y=185)
+    ent4=Entry(page2,textvar=var16)
+    ent4.place(x=200,y=190)
+
+    lab5=Label(page2,text="student father name", fg="black", bg="#98c4ed")
+    lab5.place(x=30,y=235)
+    ent5=Entry(page2,textvar=var17)
+    ent5.place(x=200,y=240)
+
+    lab6=Label(page2,text="student grandfather name", fg="black", bg="#98c4ed")
+    lab6.place(x=30,y=285)
+    ent6=Entry(page2,textvar=var18)
+    ent6.place(x=200,y=290)
+
+    lab7=Label(page2,text="date of birth", fg="black", bg="#98c4ed")
+    lab7.place(x=30,y=335)
+    ent7=Entry(page2,textvar=var19)
+    ent7.place(x=200,y=340)
+
+    lab8=Label(page2,text="tazkira NO", fg="black", bg="#98c4ed")
+    lab8.place(x=30,y=385)
+    ent8=Entry(page2,textvar=var20)
+    ent8.place(x=200,y=390)
+
+    lab9=Label(page2,text="nation", fg="black", bg="#98c4ed")
+    lab9.place(x=30,y=435)
+    ent9=Entry(page2,textvar=var21)
+    ent9.place(x=200,y=440)
+
+    lab10=Label(page2,text="father occupation", fg="black", bg="#98c4ed")
+    lab10.place(x=30,y=485)
+    ent10=Entry(page2,textvar=var22)
+    ent10.place(x=200,y=490)
+
+    lab11=Label(page2,text="current class", fg="black", bg="#98c4ed")
+    lab11.place(x=30,y=535)
+    ent11=Entry(page2,textvar=var23)
+    ent11.place(x=200,y=540)
+
+    #lab12=Label(page2,text="native language")
+    #lab12.place(x=1190,y=535)
+    #ent12=Entry(page2,textvar=var12)
+    #ent12.place(x=1050,y=540)
+
+    #lab13=Label(page2,text="maktoob num")
+    #lab13.place(x=1190,y=585)
+    #ent13=Entry(page2,textvar=var12)
+    #ent13.place(x=1050,y=590)
+
+    #lab14=Label(page2,text="num musalsal")
+    #lab14.place(x=700,y=135)
+    #ent14=Entry(page2,textvar=var13)
+    #ent14.place(x=550,y=140)
+
+#===========================================================PERMANENT ADDRESS=======================================================================    
+    lab16=Label(page2,text="district",fg="black", bg="#98c4ed")
+    lab16.place(x=800,y=220)
+    ent16=Entry(page2,textvar=var24)
+    ent16.place(x=890,y=225)
+
+    lab17=Label(page2,text="province",fg="black", bg="#98c4ed")
+    lab17.place(x=550,y=220)
+    ent17=Entry(page2,textvar=var25)
+    ent17.place(x=610,y=225)
+
+    lab18=Label(page2,text="city",fg="black", bg="#98c4ed")
+    lab18.place(x=800,y=270)
+    ent18=Entry(page2,textvar=var26)
+    ent18.place(x=890,y=275)
+
+    lab19=Label(page2,text="street",fg="black", bg="#98c4ed")
+    lab19.place(x=550,y=270)
+    ent19=Entry(page2,textvar=var27)
+    ent19.place(x=610,y=275)
+    #==================================================CURRENT ADDRESS================================================================================
+    lab20=Label(page2,text="district",fg="black", bg="#98c4ed")
+    lab20.place(x=800,y=420)
+    ent20=Entry(page2,textvar=var28)
+    ent20.place(x=890,y=425)
+
+    lab21=Label(page2,text="province",fg="black", bg="#98c4ed")
+    lab21.place(x=550,y=470)
+    ent21=Entry(page2,textvar=var29)
+    ent21.place(x=610,y=475)
+
+    lab22=Label(page2,text="city",fg="black", bg="#98c4ed")
+    lab22.place(x=800,y=470)
+    ent22=Entry(page2,textvar=var30)
+    ent22.place(x=890,y=475)
+
+    lab23=Label(page2,text="street",fg="black", bg="#98c4ed")
+    lab23.place(x=550,y=420)
+    ent23=Entry(page2,textvar=var31)
+    ent23.place(x=610,y=425)
+
+    lab24=Label(page2,text="overview",fg="black", bg="#98c4ed")
+    lab24.place(x=550,y=570)
+    ent24=Entry(page2,textvar=var32,width=50)
+    ent24.place(height=100, width=350)
+    ent24.place(x=610,y=555)
+    #ent24.grid_columnconfigure(30,weight=100)
+#====================================================================STUDENT REGISTRATION SAVE AND DELETE BUTTON=======================================================
+    btn1=Button(page2,text="save", width=25, height=3, bd=5, fg="black", bg="gray")
+    btn1.place(x=1100,y=520)
+
+    '''btn2=Button(page2,text="main menu", width=25, height=3, bd=5, fg="black", bg="gray")
+    btn2.place(x=1100,y=600)'''
+
+#==================================================================STUDENT REGISTRATION UPLOAD BUTTON===================================================================
+
+    def UploadAction():
+        
+        filename=filedialog.askopenfilename()
+        import Image
+        
+        
+        img=PhotoImage(filename)
+        #lab27=Label(page2,text="selected photo",image=img)
+        #lab27.place(x=80,y=200)
+        f1=Frame(page2, width=200, height=170, bg="black", relief=SUNKEN)
+        f1.pack(side=LEFT)
+        f1.place(x=60,y=150)
+    
+
+
+    btn3=Button(page2,text="upload photo", width=25, height=3, bd=3 , command=UploadAction, bg="gray", fg="black")
+    btn3.place(x=1100,y=450)
+    
+
+    
+    lab25=Label(page2,text="-----------------------------------permanenet address-----------------------------------",fg="black", bg="#98c4ed")
+    lab25.place(x=550,y=135)
+
+    lab26=Label(page2,text="-----------------------------------current address--------------------------------------",fg="black", bg="#98c4ed")
+    lab26.place(x=550,y=335)
+
+        
+    
+    
+    
+    
+
+    
+button2=Button(f1, text="student registration", width=20, fg="black", bg="#98c4ed", height=1, bd=3,  command=btn_2)
+button2.place(x=40,y=130)
+
+#============================================================ TEACHER REGISTRATION===============================================================================
+def btn_3():
+    page3=Tk()
+    page3.geometry("1350x750")
+    page3.title("TEACHER REGISTRATION FORM")
+    page3.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page3, text="TEACHER REGISTRATION")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+    lab1=Label(page3,text="Teacher id", fg="black", bg="#98c4ed")
+    lab1.place(x=30,y=135)
+    ent1=Entry(page3,textvar=var33)
+    ent1.place(x=200,y=140)
+
+
+    lab4=Label(page3,text="Teacher name", fg="black", bg="#98c4ed")
+    lab4.place(x=30,y=185)
+    ent4=Entry(page3,textvar=var34)
+    ent4.place(x=200,y=190)
+
+    lab5=Label(page3,text="Teacher father name", fg="black", bg="#98c4ed")
+    lab5.place(x=30,y=235)
+    ent5=Entry(page3,textvar=var35)
+    ent5.place(x=200,y=240)
+
+    lab6=Label(page3,text="Teacher grandfather name", fg="black", bg="#98c4ed")
+    lab6.place(x=30,y=285)
+    ent6=Entry(page3,textvar=var36)
+    ent6.place(x=200,y=290)
+
+    lab7=Label(page3,text="date of birth", fg="black", bg="#98c4ed")
+    lab7.place(x=30,y=335)
+    ent7=Entry(page3,textvar=var37)
+    ent7.place(x=200,y=340)
+
+    lab8=Label(page3,text="Salary", fg="black", bg="#98c4ed")
+    lab8.place(x=30,y=385)
+    ent8=Entry(page3,textvar=var38)
+    ent8.place(x=200,y=390)
+
+    lab9=Label(page3,text="Phone No", fg="black", bg="#98c4ed")
+    lab9.place(x=30,y=435)
+    ent9=Entry(page3,textvar=var39)
+    ent9.place(x=200,y=440)
+
+    lab10=Label(page3,text="Job duration", fg="black", bg="#98c4ed")
+    lab10.place(x=30,y=485)
+    ent10=Entry(page3,textvar=var40)
+    ent10.place(x=200,y=490)
+
+    lab11=Label(page3,text="Job duration", fg="black", bg="#98c4ed")
+    lab11.place(x=30,y=535)
+    ent11=Entry(page3,textvar=var41)
+    ent11.place(x=200,y=540)
+
+    lab12=Label(page3,text="Education", fg="black", bg="#98c4ed")
+    lab12.place(x=30,y=485)
+    ent12=Entry(page3,textvar=var42)
+    ent12.place(x=200,y=490)
+
+    #lab12=Label(page3,text="native language")
+    #lab12.place(x=1190,y=535)
+    #ent12=Entry(page2,textvar=var12)
+    #ent12.place(x=1050,y=540)
+
+    #lab13=Label(page3,text="maktoob num")
+    #lab13.place(x=1190,y=585)
+    #ent13=Entry(page2,textvar=var12)
+    #ent13.place(x=1050,y=590)
+
+    #lab14=Label(page3,text="num musalsal")
+    #lab14.place(x=700,y=135)
+    #ent14=Entry(page2,textvar=var13)
+    #ent14.place(x=550,y=140)
+
+#===========================================================PERMANENT ADDRESS=======================================================================    
+    lab16=Label(page3,text="district",fg="black", bg="#98c4ed")
+    lab16.place(x=800,y=220)
+    ent16=Entry(page3,textvar=var43)
+    ent16.place(x=890,y=225)
+
+    lab17=Label(page3,text="province",fg="black", bg="#98c4ed")
+    lab17.place(x=550,y=220)
+    ent17=Entry(page3,textvar=var44)
+    ent17.place(x=610,y=225)
+
+    lab18=Label(page3,text="city",fg="black", bg="#98c4ed")
+    lab18.place(x=800,y=270)
+    ent18=Entry(page3,textvar=var45)
+    ent18.place(x=890,y=275)
+
+    lab19=Label(page3,text="street",fg="black", bg="#98c4ed")
+    lab19.place(x=550,y=270)
+    ent19=Entry(page3,textvar=var46)
+    ent19.place(x=610,y=275)
+    #==================================================CURRENT ADDRESS================================================================================
+    lab20=Label(page3,text="district",fg="black", bg="#98c4ed")
+    lab20.place(x=800,y=420)
+    ent20=Entry(page3,textvar=var47)
+    ent20.place(x=890,y=425)
+
+    lab21=Label(page3,text="province",fg="black", bg="#98c4ed")
+    lab21.place(x=550,y=470)
+    ent21=Entry(page3,textvar=var48)
+    ent21.place(x=610,y=475)
+
+    lab22=Label(page3,text="city",fg="black", bg="#98c4ed")
+    lab22.place(x=800,y=470)
+    ent22=Entry(page3,textvar=var49)
+    ent22.place(x=890,y=475)
+
+    lab23=Label(page3,text="street",fg="black", bg="#98c4ed")
+    lab23.place(x=550,y=420)
+    ent23=Entry(page3,textvar=var50)
+    ent23.place(x=610,y=425)
+
+    lab24=Label(page3,text="overview",fg="black", bg="#98c4ed")
+    lab24.place(x=550,y=570)
+    ent24=Entry(page3,textvar=var51,width=50)
+    ent24.place(height=100, width=350)
+    ent24.place(x=610,y=555)
+    #ent24.grid_columnconfigure(30,weight=100)
+#====================================================================STUDENT REGISTRATION SAVE AND DELETE BUTTON=======================================================
+    btn1=Button(page3,text="save", width=25, height=3, bd=5, fg="black", bg="gray")
+    btn1.place(x=1100,y=520)
+
+    '''btn2=Button(page3,text="main menu", width=25, height=3, bd=5, fg="black", bg="gray")
+    btn2.place(x=1100,y=600)'''
+
+#==================================================================STUDENT REGISTRATION UPLOAD BUTTON===================================================================
+
+    def UploadAction():
+        
+        filename=filedialog.askopenfilename()
+        import Image
+        
+        
+        img=PhotoImage(filename)
+        #lab27=Label(page3,text="selected photo",image=img)
+        #lab27.place(x=80,y=200)
+        f1=Frame(page3, width=200, height=170, bg="black", relief=SUNKEN)
+        f1.pack(side=LEFT)
+        f1.place(x=60,y=150)
+    
+
+
+    btn3=Button(page3,text="upload photo", width=25, height=3, bd=3 , command=UploadAction, bg="gray", fg="black")
+    btn3.place(x=1100,y=450)
+    
+
+    
+    lab25=Label(page3,text="-----------------------------------permanenet address-----------------------------------",fg="black", bg="#98c4ed")
+    lab25.place(x=550,y=135)
+
+    lab26=Label(page3,text="-----------------------------------current address--------------------------------------",fg="black", bg="#98c4ed")
+    lab26.place(x=550,y=335)
+    
+button3=Button(f1, text="teacher registration", width=20, fg="black", bg="#98c4ed", height=1, bd=3, command=btn_3)
+button3.place(x=40,y=170)
+#========================================================== STUDENT ATTANDANCE==================================================================================
+def btn_4():
+    page4=Tk()
+    page4.geometry("1350x750")
+    page4.title("STUDENT ATTANDANCE FORM")
+    page4.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page4, text="STUDENT ATTANDANCE")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button4=Button(f1, text="student attandance", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_4)
+button4.place(x=40,y=210)
+#=============================================================TEACHER ATTANDANCE===============================================================================
+def btn_5():
+    page5=Tk()
+    page5.geometry("1350x750")
+    page5.title("TEACHER ATTANDANCE FORM")
+    page5.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page5, text="TEACHER ATTANDANCE")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button5=Button(f1, text="teacher attandance", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_5)
+button5.place(x=40,y=250)
+#===============================================================STUDENT FEE==============================================================================
+def btn_6():
+    page6=Tk()
+    page6.geometry("1350x750")
+    page6.title("sSTUDENT FEE FORM")
+    page6.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page6, text="STUDENT FEE")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+    f3=Frame(page6, width=900, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=250,y=150)
+
+
+    lab1=Label(f3, text="date", bg="gray", fg="black" )
+    lab1.place(x=620,y=40)
+    ent1=Entry(f3, textvar=var52)
+    ent1.place(x=700,y=40)
+
+    lab2=Label(f3, text="student id", bg="gray", fg="black" )
+    lab2.place(x=50,y=100)
+    ent2=Entry(f3, textvar=var53)
+    ent2.place(x=150,y=100)
+
+    lab3=Label(f3, text="class id", bg="gray", fg="black" )
+    lab3.place(x=50,y=150)
+    ent3=Entry(f3, textvar=var54)
+    ent3.place(x=150,y=150)
+
+    lab4=Label(f3, text="admission fee", bg="gray", fg="black" )
+    lab4.place(x=50,y=200)
+    ent4=Entry(f3, textvar=var55)
+    ent4.place(x=150,y=200)
+
+    lab5=Label(f3, text="uniform", bg="gray", fg="black" )
+    lab5.place(x=50,y=250)
+    ent5=Entry(f3, textvar=var56)
+    ent5.place(x=150,y=250)
+
+    
+    lab6=Label(f3, text="exam fee", bg="gray", fg="black" )
+    lab6.place(x=50,y=300)
+    ent6=Entry(f3, textvar=var57)
+    ent6.place(x=150,y=300)
+
+
+    
+    lab7=Label(f3, text="date", bg="gray", fg="black" )
+    lab7.place(x=620,y=40)
+    ent7=Entry(f3, textvar=var58)
+    ent7.place(x=700,y=40)
+
+    lab8=Label(f3, text="recipt id", bg="gray", fg="black" )
+    lab8.place(x=550,y=100)
+    ent8=Entry(f3, textvar=var59)
+    ent8.place(x=650,y=100)
+
+    lab9=Label(f3, text="tution fee", bg="gray", fg="black" )
+    lab9.place(x=550,y=150)
+    ent9=Entry(f3, textvar=var60)
+    ent9.place(x=650,y=150)
+
+    lab10=Label(f3, text="session", bg="gray", fg="black" )
+    lab10.place(x=550,y=200)
+    ent10=Entry(f3, textvar=var61)
+    ent10.place(x=650,y=200)
+
+    lab11=Label(f3, text="stationary", bg="gray", fg="black" )
+    lab11.place(x=550,y=250)
+    ent11=Entry(f3, textvar=var62)
+    ent11.place(x=650,y=250)
+
+    
+    lab12=Label(f3, text="fee month", bg="gray", fg="black" )
+    lab12.place(x=550,y=300)
+    ent12=Entry(f3, textvar=var63)
+    ent12.place(x=650,y=300)
+
+
+    
+    btn1=Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=700, y=400)
+
+    
+    
+button6=Button(f1, text="student fee", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_6)
+button6.place(x=40,y=290)
+#===================================================================TEACHER SALARY==========================================================================
+def btn_7():
+    page7=Tk()
+    page7.geometry("1350x750")
+    page7.title("TEACHER SALARY FORM")
+    page7.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page7, text="TEACHER SALARY")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+    f3=Frame(page7, width=900, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=250,y=150)
+
+
+    
+    lab1=Label(f3, text="date", bg="gray", fg="black" )
+    lab1.place(x=620,y=40)
+    ent1=Entry(f3, textvar=var64)
+    ent1.place(x=700,y=40)
+
+    lab2=Label(f3, text="student id", bg="gray", fg="black" )
+    lab2.place(x=50,y=100)
+    ent2=Entry(f3, textvar=var65)
+    ent2.place(x=150,y=100)
+
+    lab3=Label(f3, text="class id", bg="gray", fg="black" )
+    lab3.place(x=50,y=150)
+    ent3=Entry(f3, textvar=var66)
+    ent3.place(x=150,y=150)
+
+    lab4=Label(f3, text="admission fee", bg="gray", fg="black" )
+    lab4.place(x=50,y=200)
+    ent4=Entry(f3, textvar=var67)
+    ent4.place(x=150,y=200)
+
+    lab5=Label(f3, text="uniform", bg="gray", fg="black" )
+    lab5.place(x=50,y=250)
+    ent5=Entry(f3, textvar=var68)
+    ent5.place(x=150,y=250)
+
+    
+    lab6=Label(f3, text="exam fee", bg="gray", fg="black" )
+    lab6.place(x=550,y=250)
+    ent6=Entry(f3, textvar=var69)
+    ent6.place(x=650,y=250)
+
+
+    
+    lab7=Label(f3, text="date", bg="gray", fg="black" )
+    lab7.place(x=620,y=40)
+    ent7=Entry(f3, textvar=var70)
+    ent7.place(x=700,y=40)
+
+    lab8=Label(f3, text="recipt id", bg="gray", fg="black" )
+    lab8.place(x=550,y=100)
+    ent8=Entry(f3, textvar=var71)
+    ent8.place(x=650,y=100)
+
+    lab9=Label(f3, text="tution fee", bg="gray", fg="black" )
+    lab9.place(x=550,y=150)
+    ent9=Entry(f3, textvar=var72)
+    ent9.place(x=650,y=150)
+
+    lab10=Label(f3, text="session", bg="gray", fg="black" )
+    lab10.place(x=550,y=200)
+    ent10=Entry(f3, textvar=var73)
+    ent10.place(x=650,y=200)
+
+
+
+    btn1=Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=700, y=400)
+    
+button7=Button(f1, text="teacher salary", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_7)
+button7.place(x=40,y=330)
+#==============================================================EXAMINATION================================================================================
+def btn_8():
+    page8=Tk()
+    page8.geometry("1350x750")
+    page8.title("EXAMINATION FORM")
+    page8.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page8, text="EXAMINATION")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+
+    
+    f3=Frame(page8, width=900, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=250,y=150)
+
+
+    
+
+    lab2=Label(f3, text="subject id", bg="gray", fg="black" )
+    lab2.place(x=50,y=100)
+    ent2=Entry(f3, textvar=var74)
+    ent2.place(x=150,y=100)
+
+    lab3=Label(f3, text="subject name", bg="gray", fg="black" )
+    lab3.place(x=50,y=150)
+    ent3=Entry(f3, textvar=var75)
+    ent3.place(x=150,y=150)
+
+    lab4=Label(f3, text="student id", bg="gray", fg="black" )
+    lab4.place(x=50,y=200)
+    ent4=Entry(f3, textvar=var76)
+    ent4.place(x=150,y=200)
+
+    lab5=Label(f3, text="student name", bg="gray", fg="black" )
+    lab5.place(x=50,y=250)
+    ent5=Entry(f3, textvar=var77)
+    ent5.place(x=150,y=250)
+
+    
+    lab6=Label(f3, text="class id", bg="gray", fg="black" )
+    lab6.place(x=550,y=250)
+    ent6=Entry(f3, textvar=var78)
+    ent6.place(x=650,y=250)
+
+
+
+    lab8=Label(f3, text="marks obtained", bg="gray", fg="black" )
+    lab8.place(x=550,y=100)
+    ent8=Entry(f3, textvar=var79)
+    ent8.place(x=650,y=100)
+
+    lab9=Label(f3, text="total marks", bg="gray", fg="black" )
+    lab9.place(x=550,y=150)
+    ent9=Entry(f3, textvar=var80)
+    ent9.place(x=650,y=150)
+
+    lab10=Label(f3, text="date", bg="gray", fg="black" )
+    lab10.place(x=550,y=200)
+    ent10=Entry(f3, textvar=var81)
+    ent10.place(x=650,y=200)
+
+
+
+    btn1=Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=700, y=400)
+    
+button8=Button(f1, text="examination", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_8)
+button8.place(x=40,y=370)
+#=====================================================================SCHOOL LEAVING CERTIFICATE==========================================================================
+def btn_9():
+    page9=Tk()
+    page9.geometry("1350x750")
+    page9.title("SCHOOL LEAVING CERTIFICATE")
+    page9.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page9, text="SCHOOL LEAVING CERTIFICATE")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+
+    f3=Frame(page9, width=400, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=200,y=150)
+
+    f4=Frame(page9, width=400, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f4.place(x=800,y=150)
+
+    lab1=Label(f3, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+    lab1.place(x=50,y=100)
+    ent1=Entry(f3,textvar=var82)
+    ent1.place(x=190,y=100)
+
+    lab2=Label(f3, text="student id", fg="black", bg="gray", compound=LEFT)
+    lab2.place(x=50,y=150)
+    ent2=Entry(f3,textvar=var83)
+    ent2.place(x=190,y=150)
+
+    lab3=Label(f3, text="student name", fg="black", bg="gray", compound=LEFT)
+    lab3.place(x=50,y=200)
+    ent3=Entry(f3,textvar=var84)
+    ent3.place(x=190,y=200)
+
+    lab4=Label(f3, text="driver name", fg="black", bg="gray", compound=LEFT)
+    lab4.place(x=50,y=250)
+    ent4=Entry(f3,textvar=var85)
+    ent4.place(x=190,y=250)
+
+    lab5=Label(f3, text="driver phone", fg="black", bg="gray", compound=LEFT)
+    lab5.place(x=50,y=300)
+    ent5=Entry(f3,textvar=var86)
+    ent5.place(x=190,y=300)
+
+    lab6=Label(f3, text="location", fg="black", bg="gray", compound=LEFT)
+    lab6.place(x=50,y=350)
+    ent6=Entry(f3,textvar=var87)
+    ent6.place(x=190,y=350)
+
+    lab7=Label(f3, text="session", fg="black", bg="gray", compound=LEFT)
+    lab7.place(x=50,y=400)
+    ent7=Entry(f3,textvar=var88)
+    ent7.place(x=190,y=400)
+
+    btn1=Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=270, y=440)
+
+
+    
+
+    lab15=Label(f3, text="CURRENT SCHOOL", bg="black", fg="white", font=("arial", 20, "bold"),width=20, height=1)
+    lab15.place(x=20,y=20)
+    
+    lab16=Label(f4, text="PREVIOUS SCHOOL", bg="black", fg="white", font=("arial", 20, "bold"),width=20, height=1 )
+    lab16.place(x=20,y=20)
+
+
+    lab8=Label(f4, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+    lab8.place(x=50,y=100)
+    ent8=Entry(f4,textvar=var89)
+    ent8.place(x=190,y=100)
+
+    lab9=Label(f4, text="teacher id", fg="black", bg="gray", compound=LEFT)
+    lab9.place(x=50,y=150)
+    ent9=Entry(f4,textvar=var90)
+    ent9.place(x=190,y=150)
+
+    lab10=Label(f4, text="teacher name", fg="black", bg="gray", compound=LEFT)
+    lab10.place(x=50,y=200)
+    ent10=Entry(f4,textvar=var91)
+    ent10.place(x=190,y=200)
+
+    lab11=Label(f4, text="driver name", fg="black", bg="gray", compound=LEFT)
+    lab11.place(x=50,y=250)
+    ent11=Entry(f4,textvar=var92)
+    ent11.place(x=190,y=250)
+
+    lab12=Label(f4, text="driver phone", fg="black", bg="gray", compound=LEFT)
+    lab12.place(x=50,y=300)
+    ent12=Entry(f4,textvar=var93)
+    ent12.place(x=190,y=300)
+
+    lab13=Label(f4, text="location", fg="black", bg="gray", compound=LEFT)
+    lab13.place(x=50,y=350)
+    ent13=Entry(f4,textvar=var94)
+    ent13.place(x=190,y=350)
+
+    lab14=Label(f4, text="session", fg="black", bg="gray", compound=LEFT)
+    lab14.place(x=50,y=400)
+    ent14=Entry(f4,textvar=var95)
+    ent14.place(x=190,y=400)
+
+    btn1=Button(f4, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+    btn1.place(x=270, y=440)
+    
+button9=Button(f1, text="school leaving certificate", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_9)
+button9.place(x=40,y=410)
+#================================================================SADERA WAREDA=================================================================================
+def btn_10():
+    page10=Tk()
+    page10.geometry("1350x750")
+    page10.title("SADERA WAREDA ")
+    page10.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page10, text="SADERA WAREDA")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button10=Button(f1, text="sadera wareda", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_10)
+button10.place(x=40,y=450)
+#===========================================================MINISTRY MEETINGS=================================================================================
+def btn_11():
+    page11=Tk()
+    page11.geometry("1350x750")
+    page11.title("MINISTRY MEETINGS")
+    page11.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page11, text="MINISTRY MEETINGS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+button11=Button(f1, text="ministry meetings", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_11)
+button11.place(x=40,y=490)
+#===========================================================SCHOOL MEETINGS=================================================================================
+def btn_12():
+    page12=Tk()
+    page12.geometry("1350x750")
+    page12.title("SCHOOL MEETINGS")
+    page12.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page12, text="SCHOOL MEETINGS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button12=Button(f1, text="school meetings", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_12)
+button12.place(x=40,y=530)
+#=============================================================ISLAHE MAKTOOB==============================================================================
+def btn_13():
+    page13=Tk()
+    page13.geometry("1350x750")
+    page13.title("ISLAHE MAKTOOB")
+    page13.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page13, text="ISLAHE MAKTOOB")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button13=Button(f1, text="islahe maktoob", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_13)
+button13.place(x=40,y=570)
+#===============================================================BARASI HAYAT============================================================================
+def btn_14():
+    page14=Tk()
+    page14.geometry("1350x750")
+    page14.title("BARASI HAYAT")
+    page14.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page14, text="BARASI HAYAT")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+button14=Button(f1, text="barasi hayat", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_14)
+button14.place(x=40,y=610)
+'''#=================================================================BARASI HAYAT=============================================================================   
+def btn_15():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("student registration form")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="HAMGAM-E-RAST MODEL SCHOOL")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(f1, text="barasi hayat", width=20, height=1, bd=5, fg="black", bg="#98c4ed",  command=btn_15)
+button15.place(x=40,y=630)'''
+
+
+#==============================================================STUDENT RECORDS================================================================================
+
+def btn_16():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("STUDENT RECORD FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="STUDENT RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+    def individualstudent_record():
+        page15=Tk()
+        page15.geometry("1350x750")
+        page15.title("STUDENT RECORD FORM")
+        page15.config(background="#98c4ed")
+
+        labelfont=('arial', 50, 'bold')
+        widget=Label(page15, text="INDIVIDUAL STUDENT RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO , fill=NONE)
+        
+        f4=Frame(page15, width=900, height=500, bg="gray", relief=SUNKEN , bd=3)
+        f4.place(x=230,y=150)
+
+        lab1=Label(f4, text="student id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab1.place(x=40,y=40)
+        lab2=Label(f4, text="student name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab2.place(x=40,y=80)
+        lab3=Label(f4, text="student father name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab3.place(x=40,y=120)
+        lab4=Label(f4, text="student grand-father name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab4.place(x=40,y=160)
+        lab5=Label(f4, text="date-of-birth :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab5.place(x=40,y=200)
+        lab6=Label(f4, text="tazkira NO :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab6.place(x=40,y=240)
+        lab7=Label(f4, text="nation :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab7.place(x=40,y=280)
+        lab8=Label(f4, text="father occupation :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab8.place(x=40,y=320)
+        lab9=Label(f4, text="current class :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab9.place(x=40,y=360)
+
+        lab10=Label(f4, text="001", fg="black", bg="gray")
+        lab10.place(x=220,y=40)
+        lab11=Label(f4, text="husna mohammad", fg="black", bg="gray")
+        lab11.place(x=220,y=80)
+        lab12=Label(f4, text="mohammad ibrahim", fg="black", bg="gray")
+        lab12.place(x=220,y=120)
+        lab13=Label(f4, text="minhajuddin", fg="black", bg="gray")
+        lab13.place(x=220,y=160)
+        lab14=Label(f4, text="20-january-1999", fg="black", bg="gray")
+        lab14.place(x=220,y=200)
+        lab15=Label(f4, text="123456789", fg="black", bg="gray")
+        lab15.place(x=220,y=240)
+        lab16=Label(f4, text="afghan", fg="black", bg="gray")
+        lab16.place(x=220,y=280)
+        lab17=Label(f4, text="shop keeper", fg="black", bg="gray")
+        lab17.place(x=220,y=320)
+        lab18=Label(f4, text="eleven", fg="black", bg="gray")
+        lab18.place(x=220,y=360)
+
+        lab19=Label(f4, text="=====current address=====", fg="black", bg="gray")
+        lab19.place(x=320,y=40)
+
+        lab20=Label(f4, text="district :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab20.place(x=370,y=80)
+        lab21=Label(f4, text="province :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab21.place(x=370,y=120)
+        lab22=Label(f4, text="city :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab22.place(x=370,y=160)
+        lab23=Label(f4, text="street :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab23.place(x=370,y=200)
+        lab24=Label(f4, text="eight", fg="black", bg="gray")
+        lab24.place(x=440,y=80)
+        lab25=Label(f4, text="kabul", fg="black", bg="gray")
+        lab25.place(x=440,y=120)
+        lab26=Label(f4, text="kabul", fg="black", bg="gray")
+        lab26.place(x=440,y=160)
+        lab27=Label(f4, text="two", fg="black", bg="gray")
+        lab27.place(x=440,y=200)
+
+        lab28=Label(f4, text="=====permanent address=====", fg="black", bg="gray")
+        lab28.place(x=320,y=240)
+
+        lab29=Label(f4, text="district :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab29.place(x=370,y=280)
+        lab30=Label(f4, text="province :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab30.place(x=370,y=320)
+        lab31=Label(f4, text="city :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab31.place(x=370,y=360)
+        lab32=Label(f4, text="street :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab32.place(x=370,y=200)
+        lab33=Label(f4, text="eight", fg="black", bg="gray")
+        lab33.place(x=440,y=280)
+        lab34=Label(f4, text="ningarhar", fg="black", bg="gray")
+        lab34.place(x=440,y=320)
+        lab35=Label(f4, text="jalalabad", fg="black", bg="gray")
+        lab35.place(x=440,y=360)
+        lab36=Label(f4, text="three", fg="black", bg="gray")
+        lab36.place(x=440,y=200)
+
+        btn20=Button(f4, text="EDIT", fg="white", bg="black", height=3, width=10)
+        btn20.place(x=570,y=360)
+        btn21=Button(f4, text="DELETE", fg="white", bg="black", height=3, width=10)
+        btn21.place(x=670,y=360)
+        
+        
+        
+
+    f3=Frame(page15, width=1200, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=100,y=150)
+
+    '''lab1=Label(f3, text="SEARCH BY", fg="white", bg="black", width=149, height=2, font=("arial", 10 , "bold"))
+    lab1.place(x=0,y=0)'''
+
+    btn1=Button(f3, text="SINGLE STUDENT RECORD", fg="white", bg="black", height=5, width=80)
+    btn1.place(x=0,y=0)
+
+    btn2=Button(f3, text="CLASS RECORD", fg="white", bg="black", height=5, width=80)
+    btn2.place(x=625,y=0)
+
+    lab1=Label(f3, text="student id", fg="black", bg="gray")
+    lab1.place(x=60,y=250)
+    ent1=Entry(f3, textvar=var96)
+    ent1.place(x=170,y=250)
+    btn3=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=individualstudent_record)
+    btn3.place(x=330,y=245)
+
+    lab2=Label(f3, text="class id", fg="black", bg="gray")
+    lab2.place(x=690,y=250)
+    ent2=Entry(f3, textvar=var97)
+    ent2.place(x=770,y=250)
+    btn4=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20)
+    btn4.place(x=920,y=245)
+
+
+
+
+
+    
+    
+button15=Button(root, text="student records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_16)
+button15.place(x=300,y=250)
+
+#==============================================================STUDENT ATTANDANCE================================================================================
+
+def btn_17():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("STUDENT ATTANDANCE FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="STUDENT ATTANDANCE RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="student attandance", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_17)
+button15.place(x=470,y=250)
+
+#==============================================================STUDENT TRANSPORT RECORD================================================================================
+
+def btn_18():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("STUDENT TRANSPORT FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="STUDENT TRANSPORT RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="student transport", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_18)
+button15.place(x=640,y=250)
+
+#==============================================================STUDENT FEE RECORDS================================================================================
+
+def btn_19():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("STUDENT FEE FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="STUDENT FEE RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+    def save_fee():
+        '''page15=Tk()
+        page15.geometry("1350x750")
+        page15.title("TEACHER SALARY RECORD FORM")
+        page15.config(background="#98c4ed")
+
+        labelfont=('arial', 50, 'bold')
+        widget=Label(page15, text="TEACHER SALARY RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO , fill=NONE)'''
+
+        f4=Frame(page15, width=900, height=450, bg="gray", relief=SUNKEN , bd=3)
+        f4.place(x=230,y=150)
+
+
+        lab1=Label(f4, text="student id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab1.place(x=40,y=40)
+        lab2=Label(f4, text="class id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab2.place(x=40,y=80)
+        lab3=Label(f4, text="admission fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab3.place(x=40,y=120)
+        lab4=Label(f4, text="uniform :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab4.place(x=40,y=160)
+        lab5=Label(f4, text="exam fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab5.place(x=40,y=200)
+        lab6=Label(f4, text="recipt id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab6.place(x=40,y=240)
+        lab7=Label(f4, text="tuition fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab7.place(x=40,y=280)
+        lab8=Label(f4, text="session :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab8.place(x=40,y=320)
+        lab9=Label(f4, text="stationary :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab9.place(x=40,y=360)
+        lab19=Label(f4, text="fee month :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab19.place(x=40,y=360)
+
+
+        lab10=Label(f4, text="001 :", fg="black", bg="gray")
+        lab10.place(x=200,y=40)
+        lab11=Label(f4, text="101:", fg="black", bg="gray")
+        lab11.place(x=200,y=80)
+        lab12=Label(f4, text="1000 :", fg="black", bg="gray")
+        lab12.place(x=200,y=120)
+        lab13=Label(f4, text="500 :", fg="black", bg="gray")
+        lab13.place(x=200,y=160)
+        lab14=Label(f4, text="100 :", fg="black", bg="gray")
+        lab14.place(x=200,y=200)
+        lab15=Label(f4, text="201 :", fg="black", bg="gray")
+        lab15.place(x=200,y=240)
+        lab16=Label(f4, text="90000 :", fg="black", bg="gray")
+        lab16.place(x=200,y=280)
+        lab17=Label(f4, text="morning :", fg="black", bg="gray")
+        lab17.place(x=200,y=320)
+        lab18=Label(f4, text="500 :", fg="black", bg="gray")
+        lab18.place(x=200,y=360)
+        lab20=Label(f4, text="10000 :", fg="black", bg="gray")
+        lab20.place(x=200,y=360)
+
+        btn51=Button(f4, text="EDIT", fg="white", bg="black", height=2, width=20)
+        btn51.place(x=700,y=190)
+        btn52=Button(f4, text="DELETE", fg="white", bg="black", height=2, width=20)
+        btn52.place(x=700,y=260)
+        btn53=Button(f4, text="CANCEL", fg="white", bg="black", height=2, width=20)
+        btn53.place(x=700,y=330)
+
+
+    f3=Frame(page15, width=900, height=60, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=230,y=100)
+    
+    btn50=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=save_fee)
+    btn50.place(x=600,y=3)
+    lab10=Label(f3, text="STUDENT ID :", fg="black", bg="gray")
+    lab10.place(x=70,y=10)
+    ent10=Entry(f3, textvar=var98)
+    ent10.place(x=190,y=10)
+
+    
+button15=Button(root, text="fee records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_19)
+button15.place(x=810,y=250)
+
+#==============================================================CERTIFICATE RECORDS================================================================================
+
+def btn_20():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("CERTIFICATE RECORDS FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="CERTIFICATE RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="certificate records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_20)
+button15.place(x=980,y=250)
+
+#==============================================================TEACHER RECORDS================================================================================
+
+def btn_21():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("TEACHER RECORDS FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="TEACHER RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+
+    def individualteacher_record():
+        page15=Tk()
+        page15.geometry("1350x750")
+        page15.title("TEACHER RECORD FORM")
+        page15.config(background="#98c4ed")
+
+        labelfont=('arial', 50, 'bold')
+        widget=Label(page15, text="INDIVIDUAL TEACHER RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO , fill=NONE)
+            
+        f4=Frame(page15, width=900, height=500, bg="gray", relief=SUNKEN , bd=3)
+        f4.place(x=230,y=150)
+
+        lab1=Label(f4, text="student id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab1.place(x=40,y=40)
+        lab2=Label(f4, text="student name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab2.place(x=40,y=80)
+        lab3=Label(f4, text="student father name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab3.place(x=40,y=120)
+        lab4=Label(f4, text="student grand-father name :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab4.place(x=40,y=160)
+        lab5=Label(f4, text="date-of-birth :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab5.place(x=40,y=200)
+        lab6=Label(f4, text="tazkira NO :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab6.place(x=40,y=240)
+        lab7=Label(f4, text="nation :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab7.place(x=40,y=280)
+        lab8=Label(f4, text="father occupation :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab8.place(x=40,y=320)
+        lab9=Label(f4, text="current class :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab9.place(x=40,y=360)
+
+        lab10=Label(f4, text="001", fg="black", bg="gray")
+        lab10.place(x=220,y=40)
+        lab11=Label(f4, text="husna mohammad", fg="black", bg="gray")
+        lab11.place(x=220,y=80)
+        lab12=Label(f4, text="mohammad ibrahim", fg="black", bg="gray")
+        lab12.place(x=220,y=120)
+        lab13=Label(f4, text="minhajuddin", fg="black", bg="gray")
+        lab13.place(x=220,y=160)
+        lab14=Label(f4, text="20-january-1999", fg="black", bg="gray")
+        lab14.place(x=220,y=200)
+        lab15=Label(f4, text="123456789", fg="black", bg="gray")
+        lab15.place(x=220,y=240)
+        lab16=Label(f4, text="afghan", fg="black", bg="gray")
+        lab16.place(x=220,y=280)
+        lab17=Label(f4, text="shop keeper", fg="black", bg="gray")
+        lab17.place(x=220,y=320)
+        lab18=Label(f4, text="eleven", fg="black", bg="gray")
+        lab18.place(x=220,y=360)
+
+        lab19=Label(f4, text="=====current address=====", fg="black", bg="gray")
+        lab19.place(x=320,y=40)
+
+        lab20=Label(f4, text="district :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab20.place(x=370,y=80)
+        lab21=Label(f4, text="province :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab21.place(x=370,y=120)
+        lab22=Label(f4, text="city :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab22.place(x=370,y=160)
+        lab23=Label(f4, text="street :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab23.place(x=370,y=200)
+        lab24=Label(f4, text="eight", fg="black", bg="gray")
+        lab24.place(x=440,y=80)
+        lab25=Label(f4, text="kabul", fg="black", bg="gray")
+        lab25.place(x=440,y=120)
+        lab26=Label(f4, text="kabul", fg="black", bg="gray")
+        lab26.place(x=440,y=160)
+        lab27=Label(f4, text="two", fg="black", bg="gray")
+        lab27.place(x=440,y=200)
+
+        lab28=Label(f4, text="=====permanent address=====", fg="black", bg="gray")
+        lab28.place(x=320,y=240)
+
+        lab29=Label(f4, text="district :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab29.place(x=370,y=280)
+        lab30=Label(f4, text="province :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab30.place(x=370,y=320)
+        lab31=Label(f4, text="city :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab31.place(x=370,y=360)
+        lab32=Label(f4, text="street :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab32.place(x=370,y=200)
+        lab33=Label(f4, text="eight", fg="black", bg="gray")
+        lab33.place(x=440,y=280)
+        lab34=Label(f4, text="ningarhar", fg="black", bg="gray")
+        lab34.place(x=440,y=320)
+        lab35=Label(f4, text="jalalabad", fg="black", bg="gray")
+        lab35.place(x=440,y=360)
+        lab36=Label(f4, text="three", fg="black", bg="gray")
+        lab36.place(x=440,y=200)
+
+        btn20=Button(f4, text="EDIT", fg="white", bg="black", height=3, width=10)
+        btn20.place(x=570,y=360)
+        btn21=Button(f4, text="DELETE", fg="white", bg="black", height=3, width=10)
+        btn21.place(x=670,y=360)
+
+
+    f3=Frame(page15, width=1200, height=500, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=100,y=150)
+
+    '''lab1=Label(f3, text="SEARCH BY", fg="white", bg="black", width=149, height=2, font=("arial", 10 , "bold"))
+    lab1.place(x=0,y=0)'''
+
+    btn1=Button(f3, text="INDIVIDUAL TEACHER RECORD", fg="white", bg="black", height=5, width=80)
+    btn1.place(x=0,y=0)
+
+    btn2=Button(f3, text="CLASSES AND SUBJECTS RECORD", fg="white", bg="black", height=5, width=80)
+    btn2.place(x=625,y=0)
+
+    lab1=Label(f3, text="TEACHER ID", fg="black", bg="gray", font=("arial", 10 , "bold"))
+    lab1.place(x=60,y=250)
+    ent1=Entry(f3, textvar=var99)
+    ent1.place(x=170,y=250)
+    btn3=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=individualteacher_record)
+    btn3.place(x=330,y=245)
+
+    lab2=Label(f3, text="TEACHER ID", fg="black", bg="gray", font=("arial", 10 , "bold"))
+    lab2.place(x=690,y=250)
+    ent2=Entry(f3, textvar=var100)
+    ent2.place(x=770,y=250)
+    btn4=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20)
+    btn4.place(x=920,y=245)
+    
+button15=Button(root, text="teacher records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_21)
+button15.place(x=300,y=400)
+
+#==============================================================TEACHER ATTANDANCE================================================================================
+
+def btn_22():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("TEACHER ATTANDANCE FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="TEACHER ATTANDANCE RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="teacher attandance", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_22)
+button15.place(x=470,y=400)
+
+#==============================================================TEACHER TRANSPORT================================================================================
+
+def btn_23():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("TEACHER TRANSPORT FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="HTEACHER TRANSPORT RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="teacher transport", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_23)
+button15.place(x=640,y=400)
+
+#==============================================================TEACHER SALARY RECORDS================================================================================
+
+def btn_24():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("TEACHER SALARY FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="TEACHER SALARY RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+
+    def save_salary():
+        '''page15=Tk()
+        page15.geometry("1350x750")
+        page15.title("TEACHER SALARY RECORD FORM")
+        page15.config(background="#98c4ed")
+
+        labelfont=('arial', 50, 'bold')
+        widget=Label(page15, text="TEACHER SALARY RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO , fill=NONE)'''
+
+        f4=Frame(page15, width=900, height=450, bg="gray", relief=SUNKEN , bd=3)
+        f4.place(x=230,y=150)
+
+
+        lab1=Label(f4, text="student id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab1.place(x=40,y=40)
+        lab2=Label(f4, text="class id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab2.place(x=40,y=80)
+        lab3=Label(f4, text="admission fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab3.place(x=40,y=120)
+        lab4=Label(f4, text="uniform :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab4.place(x=40,y=160)
+        lab5=Label(f4, text="exam fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab5.place(x=40,y=200)
+        lab6=Label(f4, text="recipt id :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab6.place(x=40,y=240)
+        lab7=Label(f4, text="tuition fee :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab7.place(x=40,y=280)
+        lab8=Label(f4, text="session :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab8.place(x=40,y=320)
+        lab9=Label(f4, text="stationary :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab9.place(x=40,y=360)
+        lab19=Label(f4, text="fee month :", fg="black", bg="gray", font=("arial",10, "bold"))
+        lab19.place(x=40,y=360)
+
+
+        lab10=Label(f4, text="001 :", fg="black", bg="gray")
+        lab10.place(x=200,y=40)
+        lab11=Label(f4, text="101:", fg="black", bg="gray")
+        lab11.place(x=200,y=80)
+        lab12=Label(f4, text="1000 :", fg="black", bg="gray")
+        lab12.place(x=200,y=120)
+        lab13=Label(f4, text="500 :", fg="black", bg="gray")
+        lab13.place(x=200,y=160)
+        lab14=Label(f4, text="100 :", fg="black", bg="gray")
+        lab14.place(x=200,y=200)
+        lab15=Label(f4, text="201 :", fg="black", bg="gray")
+        lab15.place(x=200,y=240)
+        lab16=Label(f4, text="90000 :", fg="black", bg="gray")
+        lab16.place(x=200,y=280)
+        lab17=Label(f4, text="morning :", fg="black", bg="gray")
+        lab17.place(x=200,y=320)
+        lab18=Label(f4, text="500 :", fg="black", bg="gray")
+        lab18.place(x=200,y=360)
+        lab20=Label(f4, text="10000 :", fg="black", bg="gray")
+        lab20.place(x=200,y=360)
+
+        btn51=Button(f4, text="EDIT", fg="white", bg="black", height=2, width=20)
+        btn51.place(x=700,y=190)
+        btn52=Button(f4, text="DELETE", fg="white", bg="black", height=2, width=20)
+        btn52.place(x=700,y=260)
+        btn53=Button(f4, text="CANCEL", fg="white", bg="black", height=2, width=20)
+        btn53.place(x=700,y=330)
+
+
+    f3=Frame(page15, width=900, height=60, bg="gray", relief=SUNKEN , bd=3)
+    f3.place(x=230,y=100)
+    
+    btn50=Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=save_salary)
+    btn50.place(x=600,y=3)
+    lab10=Label(f3, text="TEACHER ID :", fg="black", bg="gray")
+    lab10.place(x=70,y=10)
+    ent10=Entry(f3, textvar=var101)
+    ent10.place(x=190,y=10)
+    
+button15=Button(root, text="salary records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_24)
+button15.place(x=810,y=400)
+
+#==============================================================EXAM RECORDS================================================================================
+
+def btn_25():
+    page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("EXAM RECORDS FORM")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="EXAM RECORDS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)
+    
+button15=Button(root, text="exam records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",  command=btn_25)
+button15.place(x=980,y=400)
+
+#==============================================================MAIN MENU BUTTON================================================================================
+def btn_26():
+    '''page15=Tk()
+    page15.geometry("1350x750")
+    page15.title("student registration form")
+    page15.config(background="#98c4ed")
+
+    labelfont=('arial', 50, 'bold')
+    widget=Label(page15, text="HAMGAM-E-RAST MODEL SCHOOL")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO , fill=NONE)'''
+
+
+
+    
+button1=Button(f1, text="MAIN MENU", font=('arial', 15, 'bold'), width=20, height=2, fg="black", bg="gray", bd=0)
+button1.place(x=0,y=0)
+
+
+
+
+
+
+
+
+
+
+
+
+root.mainloop()

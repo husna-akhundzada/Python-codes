@@ -1,0 +1,1755 @@
+import tkinter as tk
+from tkinter import *
+from tkinter import ttk
+import tkinter.messagebox as messagebox
+import mysql.connector
+from tkinter import filedialog
+
+root = Tk()
+
+# =============================FUNCTIONS====================================
+
+conn = mysql.connector.connect(host="localhost", user="root", passwd="", db="schoolmanagementsystem")
+mycursor = conn.cursor()
+mycursor.execute("")
+
+# mycursor.execute("CREATE TABLE teacher_registration(teacher_id int(30),teacher_name varchar(30),
+# teacher_father_name varchar(30),teacher_grandfather_name varchar(20),t_date_of_birth int(20),
+# t_salary int(20),t_phone_no int(20),t_job_duration varchar(30),t_education varchar(30),
+# t_p_district int(20),t_p_province varchar(20),t_p_city varchar(20),t_p_street int(20),
+# t_c_district int(20),t_c_province varchar(20),t_c_city varchar(20),t_c_street int(20),t_overview varchar(20))")
+
+
+conn.commit()
+# conn.close()
+
+
+# =========================================================================================
+# ========================DEFINING VARIABLES GLOBALLY======================================
+# =========================================================================================
+var1 = StringVar()
+var2 = StringVar()
+var3 = StringVar()
+var4 = StringVar()
+var5 = StringVar()
+var6 = StringVar()
+var7 = StringVar()
+var8 = StringVar()
+var9 = StringVar()
+var10 = StringVar()
+var11 = StringVar()
+var12 = StringVar()
+var13 = StringVar()
+var14 = StringVar()
+var15 = StringVar()
+var16 = StringVar()
+var17 = StringVar()
+var18 = StringVar()
+var19 = StringVar()
+var20 = StringVar()
+var21 = StringVar()
+var22 = StringVar()
+var23 = StringVar()
+var24 = StringVar()
+var25 = StringVar()
+var26 = StringVar()
+var27 = StringVar()
+var28 = StringVar()
+var29 = StringVar()
+var30 = StringVar()
+var31 = StringVar()
+var32 = StringVar()
+var33 = StringVar()
+var34 = StringVar()
+var35 = StringVar()
+var36 = StringVar()
+var37 = StringVar()
+var38 = StringVar()
+var39 = StringVar()
+var40 = StringVar()
+var41 = StringVar()
+var42 = StringVar()
+var43 = StringVar()
+var44 = StringVar()
+var45 = StringVar()
+var46 = StringVar()
+var47 = StringVar()
+var48 = StringVar()
+var49 = StringVar()
+var50 = StringVar()
+var51 = StringVar()
+var52 = StringVar()
+var53 = StringVar()
+var54 = StringVar()
+var55 = StringVar()
+var56 = StringVar()
+var57 = StringVar()
+var58 = StringVar()
+var59 = StringVar()
+var60 = StringVar()
+var61 = StringVar()
+var62 = StringVar()
+var63 = StringVar()
+var64 = StringVar()
+var65 = StringVar()
+var66 = StringVar()
+var67 = StringVar()
+var68 = StringVar()
+var69 = StringVar()
+var70 = StringVar()
+var71 = StringVar()
+var72 = StringVar()
+var73 = StringVar()
+var74 = StringVar()
+var75 = StringVar()
+var76 = StringVar()
+var77 = StringVar()
+var78 = StringVar()
+var79 = StringVar()
+var80 = StringVar()
+var81 = StringVar()
+var82 = StringVar()
+var83 = StringVar()
+var84 = StringVar()
+var85 = StringVar()
+var86 = StringVar()
+var87 = StringVar()
+var88 = StringVar()
+var89 = StringVar()
+var90 = StringVar()
+var91 = StringVar()
+var92 = StringVar()
+var93 = StringVar()
+var94 = StringVar()
+var95 = StringVar()
+var96 = StringVar()
+var97 = StringVar()
+var98 = StringVar()
+var99 = StringVar()
+var100 = StringVar()
+var101 = StringVar()
+var102 = StringVar()
+var103 = StringVar()
+var104 = StringVar()
+var105 = StringVar()
+var106 = StringVar()
+var107 = StringVar()
+var108 = StringVar()
+var109 = StringVar()
+var110 = StringVar()
+var111 = StringVar()
+var112 = StringVar()
+var113 = StringVar()
+search_by = StringVar()
+search_txt = StringVar()
+n = tk.StringVar()
+f1000 = StringVar()
+
+# =======================================================================FRAMES=========================================================================
+f1 = Frame(root, width=250, height=750, bg="gray", relief=SUNKEN, bd=3)
+f1.pack(side=LEFT)
+
+f2 = Frame(root, width=2000, height=70, bg="gray", relief=SUNKEN, bd=3)
+f2.pack(side=TOP)
+
+# ===========SCROLL BAR===============================
+# scrollbar=Scrollbar(root)
+# scrollbar.pack(side=RIGHT,fill=Y)
+root.geometry("{0}x{1}".format(root.winfo_screenwidth(), root.winfo_screenheight()))
+
+root.config(background="#98c4ed")
+root.title("HAMGAM_E_RAST MODEL SCHOOL")
+# ======================================MAIN PAGE HEADINGS======================================
+# labelfont=('arial', 50, 'bold')
+# widget=Label(root, text="HAMGAM-E-RAST MODEL SCHOOL")
+# widget.config(bg="black", fg="white")
+# widget.config(font=labelfont)
+# widget.config(height=2, width=50)
+# widget.pack(expand=NO , fill=NONE)
+
+
+label_two = Label(root, text="SCHOOL MANAGEMENT SYSTEM", font=('arial', 20, 'bold'), fg="black", bg="gray", width=40,
+                  bd=5)
+label_two.place(x=400, y=20)
+
+
+# =====================================TRANSPORTATION============================================
+
+class transportation:
+    def btn_1(self):
+        page1 = Tk()
+        page1.geometry("1350x750")
+        page1.title("STUDENT/TEACHER TRANSPORTATION FORM")
+        page1.config(background="#98c4ed")
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(self.page1, text="TRANSPORTATION")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+        f3 = Frame(self.page1, width=400, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=200, y=150)
+
+        f4 = Frame(self.page1, width=400, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f4.place(x=800, y=150)
+
+        lab1 = Label(f3, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+        lab1.place(x=50, y=100)
+        ent1 = Entry(f3, textvar=var1)
+        ent1.place(x=190, y=100)
+
+        lab2 = Label(f3, text="student id", fg="black", bg="gray", compound=LEFT)
+        lab2.place(x=50, y=150)
+        ent2 = Entry(f3, textvar=var2)
+        ent2.place(x=190, y=150)
+
+        lab3 = Label(f3, text="student name", fg="black", bg="gray", compound=LEFT)
+        lab3.place(x=50, y=200)
+        ent3 = Entry(f3, textvar=var3)
+        ent3.place(x=190, y=200)
+
+        lab4 = Label(f3, text="driver name", fg="black", bg="gray", compound=LEFT)
+        lab4.place(x=50, y=250)
+        ent4 = Entry(f3, textvar=var4)
+        ent4.place(x=190, y=250)
+
+        lab5 = Label(f3, text="driver contact", fg="black", bg="gray", compound=LEFT)
+        lab5.place(x=50, y=300)
+        ent5 = Entry(f3, textvar=var5)
+        ent5.place(x=190, y=300)
+
+        lab6 = Label(f3, text="location", fg="black", bg="gray", compound=LEFT)
+        lab6.place(x=50, y=350)
+        ent6 = Entry(f3, textvar=var6)
+        ent6.place(x=190, y=350)
+
+        lab7 = Label(f3, text="session", fg="black", bg="gray", compound=LEFT)
+        lab7.place(x=50, y=400)
+        ent7 = Entry(f3, textvar=var7)
+        ent7.place(x=190, y=400)
+
+        def stdtrans():
+            self.lab1 = ent1.get()
+            self.lab2 = ent2.get()
+            self.lab3 = ent3.get()
+            self.lab4 = ent4.get()
+            self.lab5 = ent5.get()
+            self.lab6 = ent6.get()
+            self.lab7 = ent7.get()
+
+            sql = "INSERT INTO student_transportation VALUES(%s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (self.lab1, self.lab2, self.lab3, self.lab4, self.lab5, self.lab6, self.lab7))
+            conn.commit()
+            conn.close()
+
+        btn1 = Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2, command=stdtrans)
+        btn1.place(x=270, y=440)
+
+        lab8 = Label(f3, text="STUDENT", bg="black", fg="white", font=("arial", 20, "bold"), width=20, height=1)
+        lab8.place(x=20, y=20)
+
+        lab9 = Label(f4, text="TEACHER", bg="black", fg="white", font=("arial", 20, "bold"), width=20, height=1)
+        lab9.place(x=20, y=20)
+
+        lab10 = Label(f4, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+        lab10.place(x=50, y=100)
+        ent8 = Entry(f4, textvar=var8)
+        ent8.place(x=190, y=100)
+
+        lab11 = Label(f4, text="teacher id", fg="black", bg="gray", compound=LEFT)
+        lab11.place(x=50, y=150)
+        ent9 = Entry(f4, textvar=var9)
+        ent9.place(x=190, y=150)
+
+        lab13 = Label(f4, text="teacher name", fg="black", bg="gray", compound=LEFT)
+        lab13.place(x=50, y=200)
+        ent10 = Entry(f4, textvar=var10)
+        ent10.place(x=190, y=200)
+
+        lab14 = Label(f4, text="driver name", fg="black", bg="gray", compound=LEFT)
+        lab14.place(x=50, y=250)
+        ent11 = Entry(f4, textvar=var11)
+        ent11.place(x=190, y=250)
+
+        lab15 = Label(f4, text="driver contact", fg="black", bg="gray", compound=LEFT)
+        lab15.place(x=50, y=300)
+        ent12 = Entry(f4, textvar=var12)
+        ent12.place(x=190, y=300)
+
+        lab16 = Label(f4, text="location", fg="black", bg="gray", compound=LEFT)
+        lab16.place(x=50, y=350)
+        ent13 = Entry(f4, textvar=var13)
+        ent13.place(x=190, y=350)
+
+        lab17 = Label(f4, text="session", fg="black", bg="gray", compound=LEFT)
+        lab17.place(x=50, y=400)
+        ent14 = Entry(f4, textvar=var14)
+        ent14.place(x=190, y=400)
+
+        def tchtrans():
+            self.lab10 = ent8.get()
+            self.lab11 = ent9.get()
+            self.lab13 = ent10.get()
+            self.lab14 = ent11.get()
+            self.lab15 = ent12.get()
+            self.lab16 = ent13.get()
+            self.lab17 = ent14.get()
+
+            sql = "INSERT INTO teacher_transportation VALUES(%s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (self.lab10, self.lab11, self.lab13, self.lab14, self.lab15,
+                                   self.lab16, self.lab17))
+            conn.commit()
+            conn.close()
+
+        btn2 = Button(f4, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2, command=tchtrans)
+        btn2.place(x=270, y=440)
+
+    button1 = Button(f1, text="transportation", width=20, height=0, fg="black", bg="#98c4ed", bd=3, command=btn_1)
+    button1.place(x=40, y=90)
+
+
+# ============================STUDENT REGISTRATION=============================================
+class student:
+
+    def btn_2(self):
+        page2 = Tk()
+        page2.geometry("1350x750")
+        page2.title("sSTUDENT REGISTRATION FORM")
+        page2.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page2, text="STUDENT REGISTRATION")
+        widget.config(fg="black", bg="gray")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+        lab18 = Label(page2, text="student id", fg="black", bg="#98c4ed")
+        lab18.place(x=30, y=135)
+        ent15 = Entry(page2, textvar=var15)
+        ent15.place(x=200, y=140)
+        lab19 = Label(page2, text="student name", fg="black", bg="#98c4ed")
+        lab19.place(x=30, y=185)
+        ent16 = Entry(page2, textvar=var16)
+        ent16.place(x=200, y=190)
+        lab20 = Label(page2, text="student father name", fg="black", bg="#98c4ed")
+        lab20.place(x=30, y=235)
+        ent17 = Entry(page2, textvar=var17)
+        ent17.place(x=200, y=240)
+        lab21 = Label(page2, text="student grandfather name", fg="black", bg="#98c4ed")
+        lab21.place(x=30, y=285)
+        ent18 = Entry(page2, textvar=var18)
+        ent18.place(x=200, y=290)
+        lab22 = Label(page2, text="date of birth", fg="black", bg="#98c4ed")
+        lab22.place(x=30, y=335)
+        ent19 = Entry(page2, textvar=var19)
+        ent19.place(x=200, y=340)
+        lab23 = Label(page2, text="tazkira NO", fg="black", bg="#98c4ed")
+        lab23.place(x=30, y=385)
+        ent20 = Entry(page2, textvar=var20)
+        ent20.place(x=200, y=390)
+        lab24 = Label(page2, text="nation", fg="black", bg="#98c4ed")
+        lab24.place(x=30, y=435)
+        ent21 = Entry(page2, textvar=var21)
+        ent21.place(x=200, y=440)
+        lab25 = Label(page2, text="father occupation", fg="black", bg="#98c4ed")
+        lab25.place(x=30, y=485)
+        ent22 = Entry(+page2, textvar=var22)
+        ent22.place(x=200, y=490)
+
+        lab26 = Label(page2, text="current class", fg="black", bg="#98c4ed")
+        lab26.place(x=30, y=535)
+        ent23 = Entry(page2, textvar=var23)
+        ent23.place(x=200, y=540)
+
+        # n=tk.StringVar()
+
+        lab27 = Label(page2, text="Session", fg="black", bg="#98c4ed")
+        lab27.place(x=30, y=585)
+
+        comboexample = ttk.Combobox(page2, width=17, textvar=n, values=['Morning', 'Evening'])
+        comboexample.place(x=200, y=590)
+        comboexample.current()
+        # =========================PERMANENT ADDRESS================================================
+        lab28 = Label(page2, text="district", fg="black", bg="#98c4ed")
+        lab28.place(x=800, y=220)
+        ent24 = Entry(page2, textvar=var24)
+        ent24.place(x=890, y=225)
+        lab29 = Label(page2, text="province", fg="black", bg="#98c4ed")
+        lab29.place(x=550, y=220)
+        ent25 = Entry(page2, textvar=var25)
+        ent25.place(x=610, y=225)
+        lab30 = Label(page2, text="city", fg="black", bg="#98c4ed")
+        lab30.place(x=800, y=270)
+        ent26 = Entry(page2, textvar=var26)
+        ent26.place(x=890, y=275)
+        lab31 = Label(page2, text="street", fg="black", bg="#98c4ed")
+        lab31.place(x=550, y=270)
+        ent27 = Entry(page2, textvar=var27)
+        ent27.place(x=610, y=275)
+        # =====================CURRENT ADDRESS=======================================================
+        lab32 = Label(page2, text="district", fg="black", bg="#98c4ed")
+        lab32.place(x=800, y=420)
+        ent28 = Entry(page2, textvar=var28)
+        ent28.place(x=890, y=425)
+
+        lab33 = Label(page2, text="province", fg="black", bg="#98c4ed")
+        lab33.place(x=550, y=470)
+        ent29 = Entry(page2, textvar=var29)
+        ent29.place(x=610, y=475)
+
+        lab34 = Label(page2, text="city", fg="black", bg="#98c4ed")
+        lab34.place(x=800, y=470)
+        ent30 = Entry(page2, textvar=var30)
+        ent30.place(x=890, y=475)
+        lab35 = Label(page2, text="street", fg="black", bg="#98c4ed")
+        lab35.place(x=550, y=420)
+        ent31 = Entry(page2, textvar=var31)
+        ent31.place(x=610, y=425)
+        lab36 = Label(page2, text="overview", fg="black", bg="#98c4ed")
+        lab36.place(x=550, y=570)
+        ent36 = Text(page2, width=40, height=5)
+        ent36.place(x=610, y=555)
+
+        # =====================STUDENT REGISTRATION SAVE AND DELETE BUTTON=====================================
+        def stdregsave():
+            self.mycursor = conn.cursor()
+            self.lab18 = ent15.get()
+            self.lab19 = ent16.get()
+            self.lab20 = ent17.get()
+            self.lab21 = ent18.get()
+            self.lab22 = ent19.get()
+            self.lab23 = ent20.get()
+            self.lab24 = ent21.get()
+            self.lab25 = ent22.get()
+            self.lab26 = ent23.get()
+            self.lab28 = ent24.get()
+            self.lab29 = ent25.get()
+            self.lab30 = ent26.get()
+            self.lab31 = ent27.get()
+            self.lab32 = ent28.get()
+            self.lab33 = ent29.get()
+            self.lab34 = ent30.get()
+            self.lab35 = ent31.get()
+            self.lab36 = ent36.get(0, 0)
+            self.lab27 = comboExample.get()
+            sql = "INSERT INTO student_registration VALUES(%s, %s, %s, %s, %s, %s, %s, " \
+                  "%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (
+                self.lab18, self.lab19, self.lab20, self.lab21, self.lab22, self.lab23, self.lab24,
+                self.lab25, self.lab26, self.lab28, self.lab29, self.lab30, self.lab31, self.lab32,
+                self.lab33, self.lab34, self.lab35, self.lab36, self.lab27))
+            conn.commit()
+            # btn_16()
+            conn.close()
+
+        btn3 = Button(page2, text="save", width=25, height=3, bd=5, fg="black", bg="gray", command=stdregsave)
+        btn3.place(x=1100, y=520)
+
+        # ==========================STUDENT REGISTRATION UPLOAD BUTTON===============================================
+        def UploadAction():
+            filename = filedialog.askopenfilename()
+            import Image
+            img = PhotoImage(filename)
+            self.lab27=Label(page2, text="selected photo", image=img)
+            self.lab27.place(x=80, y=200)
+            self.f1=Frame(self.page2, width=200, height=170, bg="black", relief=SUNKEN)
+            self.f1.pack(side=LEFT)
+            self.f1.place(x=60, y=150)
+
+        btn4 = Button(self.page2, text="upload photo", width=25, height=3, bd=3, command=UploadAction, bg="gray",
+                      fg="black")
+        btn4.place(x=1100, y=450)
+
+        lab37 = Label(self.page2,
+                      text="-----------------------------------permanenet address-----------------------------------",
+                      fg="black", bg="#98c4ed")
+        lab37.place(x=550, y=135)
+
+        lab38 = Label(self.page2,
+                      text="-----------------------------------current address--------------------------------------",
+                      fg="black", bg="#98c4ed")
+        lab38.place(x=550, y=335)
+
+    button2 = Button(f1, text="student registration", width=20, fg="black", bg="#98c4ed", height=1, bd=3, command=btn_2)
+    button2.place(x=40, y=130)
+
+    # ============================= STUDENT ATTANDANCE=========================================================
+
+    def btn_4(self):
+        page4 = Tk()
+        page4.geometry("1350x750")
+        page4.title("STUDENT ATTANDANCE FORM")
+        page4.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page4, text="STUDENT ATTANDANCE")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        lab189 = Label(self.page4, text="class id", fg="black", bg="#98c4ed")
+        lab189.place(x=20, y=100)
+        ent102 = Entry(self.page4, textvar=var102)
+        ent102.place(x=70, y=103)
+        lab190 = Label(self.page4, text="session", fg="black", bg="#98c4ed")
+        lab190.place(x=150, y=100)
+        ent103 = Entry(self.page4, textvar=var103)
+        ent103.place(x=180, y=103)
+        lab191 = Label(self.page4, text="date", fg="black", bg="#98c4ed")
+        lab191.place(x=240, y=100)
+        ent104 = Entry(self.page4, textvar=var104)
+        ent104.place(x=280, y=103)
+
+    button4 = Button(f1, text="student attandance", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_4)
+    button4.place(x=40, y=210)
+
+    # ==============================STUDENT FEE===============================================================
+    @staticmethod
+    def btn_6():
+        page6 = Tk()
+        page6.geometry("1350x750")
+        page6.title("STUDENT FEE FORM")
+        page6.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page6, text="STUDENT FEE")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        f3 = Frame(page6, width=900, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=250, y=150)
+
+        lab60 = Label(f3, text="uniform", bg="gray", fg="black")
+        lab60.place(x=550, y=50)
+        ent52 = Entry(f3, textvar=var52)
+        ent52.place(x=650, y=50)
+
+        lab192 = Label(f3, text="recipt id", bg="gray", fg="black")
+        lab192.place(x=50, y=50)
+        ent105 = Entry(f3, textvar=var105)
+        ent105.place(x=150, y=55)
+
+        lab61 = Label(f3, text="student id", bg="gray", fg="black")
+        lab61.place(x=50, y=100)
+        ent53 = Entry(f3, textvar=var53)
+        ent53.place(x=150, y=100)
+
+        lab62 = Label(f3, text="student name", bg="gray", fg="black")
+        lab62.place(x=50, y=150)
+        ent54 = Entry(f3, textvar=var54)
+        ent54.place(x=150, y=150)
+
+        lab63 = Label(f3, text="class id", bg="gray", fg="black")
+        lab63.place(x=50, y=200)
+        ent55 = Entry(f3, textvar=var55)
+        ent55.place(x=150, y=200)
+
+        lab64 = Label(f3, text="admission fee", bg="gray", fg="black")
+        lab64.place(x=50, y=250)
+        ent56 = Entry(f3, textvar=var56)
+        ent56.place(x=150, y=250)
+
+        lab65 = Label(f3, text="exam fee", bg="gray", fg="black")
+        lab65.place(x=50, y=300)
+        ent57 = Entry(f3, textvar=var57)
+        ent57.place(x=150, y=300)
+
+        lab193 = Label(f3, text="tution fee", bg="gray", fg="black")
+        lab193.place(x=50, y=350)
+        ent106 = Entry(f3, textvar=var106)
+        ent106.place(x=150, y=350)
+
+        lab194 = Label(f3, text="fee month", bg="gray", fg="black")
+        lab194.place(x=50, y=400)
+        ent107 = Entry(f3, textvar=var107)
+        ent107.place(x=150, y=400)
+
+        """lab66=Label(f3, text="date", bg="gray", fg="black" )
+        lab66.place(x=620,y=40)
+        ent58=Entry(f3, textvar=var58)
+        ent58.place(x=700,y=40)"""
+
+        lab67 = Label(f3, text="penalty amount", bg="gray", fg="black")
+        lab67.place(x=550, y=100)
+        ent59 = Entry(f3, textvar=var59)
+        ent59.place(x=650, y=100)
+
+        lab68 = Label(f3, text="penalty reason", bg="gray", fg="black")
+        lab68.place(x=550, y=150)
+        ent60 = Entry(f3, textvar=var60)
+        ent60.place(x=650, y=150)
+
+        lab69 = Label(f3, text="stationary", bg="gray", fg="black")
+        lab69.place(x=550, y=200)
+        ent61 = Entry(f3, textvar=var61)
+        ent61.place(x=650, y=200)
+
+        lab70 = Label(f3, text="session", bg="gray", fg="black")
+        lab70.place(x=550, y=250)
+        ent62 = Entry(f3, textvar=var62)
+        ent62.place(x=650, y=250)
+
+        lab71 = Label(f3, text="date", bg="gray", fg="black")
+        lab71.place(x=550, y=300)
+        ent63 = Entry(f3, textvar=var63)
+        ent63.place(x=650, y=300)
+
+        def stdfesave():
+            self.lab192 = ent105.get()
+            self.lab61 = ent53.get()
+            self.lab62 = ent54.get()
+            self.lab63 = ent55.get()
+            self.lab64 = ent56.get()
+            self.lab65 = ent57.get()
+            self.lab193 = ent106.get()
+            self.lab194 = ent107.get()
+            self.lab60 = ent52.get()
+            self.lab67 = ent59.get()
+            self.lab68 = ent60.get()
+            self.lab69 = ent61.get()
+            self.lab70 = ent62.get()
+            self.lab71 = ent63.get()
+
+            sql = "INSERT INTO student_fee VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (
+                self.lab192, self.lab61, self.lab62, self.lab63, self.lab64, self.lab65, self.lab193, self.lab194,
+                self.lab60, self.lab67, self.lab68, self.lab69, self.lab70, self.lab71))
+            conn.commit()
+            conn.close()
+
+        btn7 = Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2, command=stdfesave)
+        btn7.place(x=700, y=400)
+
+    button6 = Button(f1, text="student fee", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_6)
+    button6.place(x=40, y=290)
+
+    # ===================================STUDENT RECORDS===============================================
+    def btn_16(self):
+        page15 = Tk()
+        page15.geometry("1350x750")
+        page15.title("STUDENT RECORD FORM")
+        page15.config(background="#98c4ed")
+        labelfont = ("arial", 50, "bold")
+        widget = Label(self.page15, text="STUDENT RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        student_btn = Frame(self.page15, width=1365, height=120, relief=SUNKEN, bd=3)
+        student_btn.place(x=0, y=84)
+        s_record = Label(student_btn, text="Search By :")
+        s_record.place(x=30, y=30)
+
+        combo_search = ttk.Combobox(student_btn, textvariable=search_by, width=10)
+        combo_search["values"] = ("student_Id", "Name")
+        combo_search.place(x=95, y=30)
+
+        search_ent = Entry(student_btn, textvariable=search_txt, relief=GROOVE, width=30, bd=2)
+        search_ent.place(x=280, y=30)
+
+        # sr_search=Button(student_btn, text="Search", width=15, height=2, bg="black", fg="white",
+        # bd=2, command=self.student_records)
+        # sr_search.place(x=550,y=20)
+
+        student_frame = Frame(self.page15, relief=RIDGE, bd=3)
+        student_frame.place(x=0, y=205, width=1366, height=537)
+
+        scroll_x = Scrollbar(student_frame, orient=HORIZONTAL)
+        scroll_y = Scrollbar(student_frame, orient=VERTICAL)
+        student_table = ttk.Treeview(student_frame, columns=(
+            "student_id", "student_name", "student_fathername", "s_grandf_name", "s_dob", "s_tazkiraNO", "s_nation",
+            "s_father_occupation", "s_currentclass", "s_c_province", "s_c_district",
+            "s_c_street", "s_c_city", "s_p_province", "s_p_street", "s_p_city", "s_p_district", "s_overview",
+            "s_session"), xscrollcommand=scroll_x.set, yscrollcommand=scroll_y.set)
+
+        scroll_x.pack(side=BOTTOM, fill=X)
+        scroll_y.pack(side=RIGHT, fill=Y)
+        scroll_x.config(command=student_table.xview)
+        scroll_y.config(command=student_table.yview)
+
+        student_table.heading("student_id", text="Student Id")
+        student_table.heading("student_name", text="Student Name")
+        student_table.heading("student_fathername", text="FatherName")
+        student_table.heading("s_grandf_name", text="Grand fatherName")
+        student_table.heading("s_dob", text="Date Of Birth")
+        student_table.heading("s_tazkiraNO", text="Tazkira NO")
+        student_table.heading("s_nation", text="Nation")
+        student_table.heading("s_father_occupation", text="Father Occupation")
+        student_table.heading("s_currentclass", text="Current Class")
+        student_table.heading("s_c_province", text="Current Province")
+        student_table.heading("s_c_district", text="Current district")
+        student_table.heading("s_c_street", text="Current Street")
+        student_table.heading("s_c_city", text="Current City")
+        student_table.heading("s_p_province", text="Permanent Province")
+        student_table.heading("s_p_street", text="Permanent Street")
+        student_table.heading("s_p_city", text="Permanent city")
+        student_table.heading("s_p_district", text="Permanent District")
+        student_table.heading("s_overview", text="overview")
+        student_table.heading("s_session", text="session")
+        student_table["show"] = "headings"
+        student_table.pack(fill=BOTH, expand=1)
+
+        def student_records():
+            self.mycursor = conn.cursor()
+            mycursor.execute("SELECT * FROM student_registration WHERE" + str(search_by.get()) + " LIKE %" + str(
+                search_txt.get()) + "%")
+            rows = mycursor.fetchall()
+            if len(rows) != 0:
+                student_table.delete(student_table.get_children())
+                for row in rows:
+                    student_table.insert('', END, values=row)
+
+                conn.commit()
+            conn.close()
+
+        sr_show = Button(student_btn, text="Show All", width=15, height=2, bg="black", fg="white", bd=2)
+        sr_show.place(x=700, y=20)
+
+        sr_search = Button(student_btn, text="Search", width=15, height=2, bg="black", fg="white", bd=2,
+                           command=student_records)
+        sr_search.place(x=550, y=20)
+
+    button16 = Button(root, text="student records", width=20, height=5, bd=5, fg="black", bg="#98c4ed", command=btn_16)
+    button16.place(x=300, y=250)
+
+    # =============================STUDENT ATTANDANCE================================================
+    @staticmethod
+    def btn_17():
+        page16 = Tk()
+        page16.geometry("1350x750")
+        page16.title("STUDENT ATTANDANCE FORM")
+        page16.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page16, text="STUDENT ATTANDANCE RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button17 = Button(root, text="student attandance", width=20, height=5, bd=5, fg="black", bg="#98c4ed",
+                      command=btn_17)
+    button17.place(x=470, y=250)
+
+    # ========================STUDENT TRANSPORT RECORD============================================
+    @staticmethod
+    def btn_18():
+        page17 = Tk()
+        page17.geometry("1350x750")
+        page17.title("STUDENT TRANSPORT FORM")
+        page17.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page17, text="STUDENT TRANSPORT RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button18 = Button(root, text="student transport", width=20, height=5, bd=5, fg="black", bg="#98c4ed",
+                      command=btn_18)
+    button18.place(x=640, y=250)
+
+    # =============================STUDENT FEE RECORDS=========================================
+    @staticmethod
+    def btn_19():
+        page18 = Tk()
+        page18.geometry("1350x750")
+        page18.title("STUDENT FEE FORM")
+        page18.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page18, text="STUDENT FEE RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        def save_fee(self):
+            f4 = Frame(page18, width=900, height=450, bg="gray", relief=SUNKEN, bd=3)
+            f4.place(x=230, y=150)
+
+            self.lab109 = Label(f4, text="student id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab109.place(x=40, y=40)
+            self.lab110 = Label(f4, text="class id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab110.place(x=40, y=80)
+            self.lab111 = Label(f4, text="admission fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab111.place(x=40, y=120)
+            self.lab112 = Label(f4, text="uniform :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab112.place(x=40, y=160)
+            self.lab113 = Label(f4, text="exam fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab113.place(x=40, y=200)
+            self.lab114 = Label(f4, text="recipt id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab114.place(x=40, y=240)
+            self.lab115 = Label(f4, text="tuition fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab115.place(x=40, y=280)
+            self.lab116 = Label(f4, text="session :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab116.place(x=40, y=320)
+            self.lab117 = Label(f4, text="stationary :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab117.place(x=40, y=360)
+            self.lab118 = Label(f4, text="fee month :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            self.lab118.place(x=40, y=360)
+
+            self.lab119 = Label(f4, text="001 :", fg="black", bg="gray")
+            self.lab119.place(x=200, y=40)
+            self.lab120 = Label(f4, text="101:", fg="black", bg="gray")
+            self.lab120.place(x=200, y=80)
+            self.lab121 = Label(f4, text="1000 :", fg="black", bg="gray")
+            self.lab121.place(x=200, y=120)
+            self.lab122 = Label(f4, text="500 :", fg="black", bg="gray")
+            self.lab122.place(x=200, y=160)
+            self.lab123 = Label(f4, text="100 :", fg="black", bg="gray")
+            self.lab123.place(x=200, y=200)
+            self.lab124 = Label(f4, text="201 :", fg="black", bg="gray")
+            self.lab124.place(x=200, y=240)
+            self.lab125 = Label(f4, text="90000 :", fg="black", bg="gray")
+            self.lab125.place(x=200, y=280)
+            self.lab126 = Label(f4, text="morning :", fg="black", bg="gray")
+            self.lab126.place(x=200, y=320)
+            self.lab127 = Label(f4, text="500 :", fg="black", bg="gray")
+            self.lab127.place(x=200, y=360)
+            self.lab128 = Label(f4, text="10000 :", fg="black", bg="gray")
+            self.lab128.place(x=200, y=360)
+
+            btn18 = Button(f4, text="EDIT", fg="white", bg="black", height=2, width=20)
+            btn18.place(x=700, y=190)
+            btn19 = Button(f4, text="DELETE", fg="white", bg="black", height=2, width=20)
+            btn19.place(x=700, y=260)
+            btn20 = Button(f4, text="CANCEL", fg="white", bg="black", height=2, width=20)
+            btn20.place(x=700, y=330)
+
+        f3 = Frame(page18, width=900, height=60, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=230, y=100)
+
+        btn50 = Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=save_fee)
+        btn50.place(x=600, y=3)
+        self.lab129 = Label(f3, text="STUDENT ID :", fg="black", bg="gray")
+        self.lab129.place(x=70, y=10)
+        ent98 = Entry(f3, textvar=var98)
+        ent98.place(x=190, y=10)
+
+    button19 = Button(root, text="fee records", width=20, height=5, bd=5, fg="black", bg="#98c4ed", command=btn_19)
+    button19.place(x=810, y=250)
+
+
+# ================================CLASS TEACHER================================================================
+# ================================TEACHER REGISTRATION=========================================================
+class teacher:
+
+    @staticmethod
+    def btn_3():
+        page3 = Tk()
+        page3.geometry("1350x750")
+        page3.title("TEACHER REGISTRATION FORM")
+        page3.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page3, text="TEACHER REGISTRATION")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        self.lab39 = Label(page3, text="Teacher id", fg="black", bg="#98c4ed")
+        self.lab39.place(x=30, y=135)
+        ent33 = Entry(page3, textvar=var33)
+        ent33.place(x=200, y=140)
+
+        self.lab40 = Label(page3, text="Teacher name", fg="black", bg="#98c4ed")
+        self.lab40.place(x=30, y=185)
+        ent34 = Entry(page3, textvar=var34)
+        ent34.place(x=200, y=190)
+
+        self.lab41 = Label(page3, text="Teacher father name", fg="black", bg="#98c4ed")
+        self.lab41.place(x=30, y=235)
+        ent35 = Entry(page3, textvar=var35)
+        ent35.place(x=200, y=240)
+
+        self.lab42 = Label(page3, text="Teacher grandfather name", fg="black", bg="#98c4ed")
+        self.lab42.place(x=30, y=285)
+        ent36 = Entry(page3, textvar=var36)
+        ent36.place(x=200, y=290)
+
+        self.lab43 = Label(page3, text="date of birth", fg="black", bg="#98c4ed")
+        self.lab43.place(x=30, y=335)
+        ent37 = Entry(page3, textvar=var37)
+        ent37.place(x=200, y=340)
+
+        self.lab44 = Label(page3, text="Salary", fg="black", bg="#98c4ed")
+        self.lab44.place(x=30, y=385)
+        ent38 = Entry(page3, textvar=var38)
+        ent38.place(x=200, y=390)
+
+        self.lab45 = Label(page3, text="Phone No", fg="black", bg="#98c4ed")
+        self.lab45.place(x=30, y=435)
+        ent39 = Entry(page3, textvar=var39)
+        ent39.place(x=200, y=440)
+        self.lab47 = Label(page3, text="Job duration", fg="black", bg="#98c4ed")
+        self.lab47.place(x=30, y=535)
+        ent41 = Entry(page3, textvar=var41)
+        ent41.place(x=200, y=540)
+        self.lab48 = Label(page3, text="Education", fg="black", bg="#98c4ed")
+        self.lab48.place(x=30, y=485)
+        ent42 = Entry(page3, textvar=var42)
+        ent42.place(x=200, y=490)
+        # ===========================PERMANENT ADDRESS======================================
+        self.lab49 = Label(page3, text="district", fg="black", bg="#98c4ed")
+        self.lab49.place(x=800, y=220)
+        self.ent43 = Entry(page3, textvar=var43)
+        ent43.place(x=890, y=225)
+
+        self.lab50 = Label(page3, text="province", fg="black", bg="#98c4ed")
+        self.lab50.place(x=550, y=220)
+        ent44 = Entry(page3, textvar=var44)
+        ent44.place(x=610, y=225)
+
+        self.lab51 = Label(page3, text="city", fg="black", bg="#98c4ed")
+        self.lab51.place(x=800, y=270)
+        ent45 = Entry(page3, textvar=var45)
+        ent45.place(x=890, y=275)
+
+        self.lab52 = Label(page3, text="street", fg="black", bg="#98c4ed")
+        self.lab52.place(x=550, y=270)
+        ent46 = Entry(page3, textvar=var46)
+        ent46.place(x=610, y=275)
+        # ========================CURRENT ADDRESS========================================
+        self.lab53 = Label(page3, text="district", fg="black", bg="#98c4ed")
+        self.lab53.place(x=800, y=420)
+        ent47 = Entry(page3, textvar=var47)
+        ent47.place(x=890, y=425)
+
+        self.lab54 = Label(page3, text="province", fg="black", bg="#98c4ed")
+        self.lab54.place(x=550, y=470)
+        ent48 = Entry(page3, textvar=var48)
+        ent48.place(x=610, y=475)
+
+        self.lab55 = Label(page3, text="city", fg="black", bg="#98c4ed")
+        self.lab55.place(x=800, y=470)
+        ent49 = Entry(page3, textvar=var49)
+        ent49.place(x=890, y=475)
+
+        self.lab56 = Label(page3, text="street", fg="black", bg="#98c4ed")
+        self.lab56.place(x=550, y=420)
+        ent50 = Entry(page3, textvar=var50)
+        ent50.place(x=610, y=425)
+
+        self.lab57 = Label(page3, text="overview", fg="black", bg="#98c4ed")
+        self.lab57.place(x=550, y=570)
+        ent51 = Entry(page3, textvar=var51, width=50)
+        ent51.place(height=100, width=350)
+        ent51.place(x=610, y=555)
+
+        # ent24.grid_columnconfigure(30,weight=100)
+        # ===========================TEACHER REGISTRATION SAVE AND DELETE BUTTON==============================
+        def tchregsave(self):
+            self.lab39 = ent33.get()
+            self.lab40 = ent34.get()
+            self.lab41 = ent35.get()
+            self.lab42 = ent36.get()
+            self.lab43 = ent37.get()
+            self.lab44 = ent38.get()
+            self.lab45 = ent39.get()
+            # lab46 = ent40.get()
+            self.lab47 = ent41.get()
+            self.lab48 = ent42.get()
+            self.lab49 = ent43.get()
+            self.lab50 = ent44.get()
+            self.lab51 = ent45.get()
+            self.lab52 = ent46.get()
+            self.lab53 = ent47.get()
+            self.lab54 = ent48.get()
+            self.lab55 = ent49.get()
+            self.lab56 = ent50.get()
+            self.lab57 = ent51.get()
+
+            sql = "INSERT INTO teacher_registration VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, " \
+                  "%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (
+                lab39, lab40, lab41, lab42, lab43, lab44, lab45, lab47, lab48, lab49, lab50,
+                lab51, lab52, lab53, lab54,
+                lab55, lab56, lab57))
+            conn.commit()
+            conn.close()
+        btn5 = Button(page3, text="save", width=25, height=3, bd=5, fg="black", bg="gray", command=tchregsave)
+        btn5.place(x=1100, y=520)
+
+        # =================TEACHER REGISTRATION UPLOAD BUTTON==============================================
+        def UploadAction():
+            filename = filedialog.askopenfilename()
+            import Image
+            self.img = PhotoImage(filename)
+            self.f1=Frame(page3, width=200, height=170, bg="black", relief=SUNKEN)
+            self.f1.pack(side=LEFT)
+            self.f1.place(x=60, y=150)
+
+        btn6 = Button(page3, text="upload photo", width=25, height=3, bd=3, command=UploadAction, bg="gray", fg="black")
+        btn6.place(x=1100, y=450)
+
+        lab58 = Label(page3,
+                      text="-----------------------------------permanent address-----------------------------------",
+                      fg="black", bg="#98c4ed")
+        lab58.place(x=550, y=135)
+
+        lab59 = Label(page3,
+                      text="-----------------------------------current address--------------------------------------",
+                      fg="black", bg="#98c4ed")
+        lab59.place(x=550, y=335)
+
+    button3 = Button(f1, text="teacher registration", width=20, fg="black", bg="#98c4ed", height=1, bd=3, command=btn_3)
+    button3.place(x=40, y=170)
+
+    # ==========================TEACHER ATTANDANCE===================================================
+    @staticmethod
+    def btn_5():
+        page5 = Tk()
+        page5.geometry("1350x750")
+        page5.title("TEACHER ATTANDANCE FORM")
+        page5.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page5, text="TEACHER ATTANDANCE")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button5 = Button(f1, text="teacher attandance", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_5)
+    button5.place(x=40, y=250)
+
+    # ============================TEACHER SALARY==============================================
+    @staticmethod
+    def btn_7():
+        page7 = Tk()
+        page7.geometry("1350x750")
+        page7.title("TEACHER SALARY FORM")
+        page7.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page7, text="TEACHER SALARY")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        f3 = Frame(page7, width=900, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=250, y=150)
+
+        """lab72=Label(f3, text="date", bg="gray", fg="black" )
+        lab72.place(x=620,y=40)
+        ent64=Entry(f3, textvar=var64)
+        ent64.place(x=700,y=40)"""
+
+        lab73 = Label(f3, text="recipt id", bg="gray", fg="black")
+        lab73.place(x=50, y=100)
+        ent65 = Entry(f3, textvar=var65)
+        ent65.place(x=150, y=100)
+
+        lab74 = Label(f3, text="teacher id", bg="gray", fg="black")
+        lab74.place(x=50, y=150)
+        ent66 = Entry(f3, textvar=var66)
+        ent66.place(x=150, y=150)
+
+        lab75 = Label(f3, text="teacher name", bg="gray", fg="black")
+        lab75.place(x=50, y=200)
+        ent67 = Entry(f3, textvar=var67)
+        ent67.place(x=150, y=200)
+
+        lab76 = Label(f3, text="total salary", bg="gray", fg="black")
+        lab76.place(x=50, y=250)
+        ent68 = Entry(f3, textvar=var68)
+        ent68.place(x=150, y=250)
+
+        lab77 = Label(f3, text="deduction reason", bg="gray", fg="black")
+        lab77.place(x=540, y=250)
+        ent69 = Entry(f3, textvar=var69)
+        ent69.place(x=650, y=250)
+
+        lab78 = Label(f3, text="date", bg="gray", fg="black")
+        lab78.place(x=50, y=300)
+        ent70 = Entry(f3, textvar=var70)
+        ent70.place(x=150, y=300)
+
+        lab79 = Label(f3, text="paid money", bg="gray", fg="black")
+        lab79.place(x=540, y=100)
+        ent71 = Entry(f3, textvar=var71)
+        ent71.place(x=650, y=100)
+
+        lab80 = Label(f3, text="salary month", bg="gray", fg="black")
+        lab80.place(x=540, y=150)
+        ent72 = Entry(f3, textvar=var72)
+        ent72.place(x=650, y=150)
+
+        lab81 = Label(f3, text="deduction amount", bg="gray", fg="black")
+        lab81.place(x=540, y=200)
+        ent73 = Entry(f3, textvar=var73)
+        ent73.place(x=650, y=200)
+
+        def tchsal():
+            self.lab73 = ent65.get()
+            self.lab74 = ent66.get()
+            self.lab75 = ent67.get()
+            self.lab76 = ent68.get()
+            self.lab79 = ent71.get()
+            self.lab80 = ent72.get()
+            self.lab81 = ent73.get()
+            self.lab77 = ent69.get()
+            self.lab78 = ent70.get()
+
+            sql = "INSERT INTO teacher_salary VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (lab73, lab74, lab75, lab76, lab79, lab80, lab81, lab77, lab78))
+            conn.commit()
+            conn.close()
+
+        btn8 = Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2, command=tchsal)
+        btn8.place(x=700, y=400)
+
+    button7 = Button(f1, text="teacher salary", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_7)
+    button7.place(x=40, y=330)
+
+    # =============================TEACHER RECORDS================================================
+    @staticmethod
+    def btn_21():
+        page20 = Tk()
+        page20.geometry("1350x750")
+        page20.title("TEACHER RECORDS FORM")
+        page20.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page20, text="TEACHER RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        def individualteacher_record():
+            page21 = Tk()
+            page21.geometry("1350x750")
+            page21.title("TEACHER RECORD FORM")
+            page21.config(background="#98c4ed")
+
+            self.labelfont=('arial', 50, 'bold')
+            self.widget=Label(page21, text="INDIVIDUAL TEACHER RECORDS")
+            widget.config(bg="gray", fg="black")
+            widget.config(font=labelfont)
+            widget.config(height=1, width=70)
+            widget.pack(expand=NO, fill=NONE)
+
+            f4 = Frame(page21, width=900, height=500, bg="gray", relief=SUNKEN, bd=3)
+            f4.place(x=230, y=150)
+
+            lab130 = Label(f4, text="student id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab130.place(x=40, y=40)
+            lab131 = Label(f4, text="student name :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab131.place(x=40, y=80)
+            lab132 = Label(f4, text="student father name :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab132.place(x=40, y=120)
+            lab133 = Label(f4, text="student grand-father name :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab133.place(x=40, y=160)
+            lab134 = Label(f4, text="date-of-birth :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab134.place(x=40, y=200)
+            lab135 = Label(f4, text="tazkira NO :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab135.place(x=40, y=240)
+            lab136 = Label(f4, text="nation :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab136.place(x=40, y=280)
+            lab137 = Label(f4, text="father occupation :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab137.place(x=40, y=320)
+            lab138 = Label(f4, text="current class :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab138.place(x=40, y=360)
+
+            lab139 = Label(f4, text="001", fg="black", bg="gray")
+            lab139.place(x=220, y=40)
+            lab140 = Label(f4, text="husna mohammad", fg="black", bg="gray")
+            lab140.place(x=220, y=80)
+            lab141 = Label(f4, text="mohammad ibrahim", fg="black", bg="gray")
+            lab141.place(x=220, y=120)
+            lab142 = Label(f4, text="minhajuddin", fg="black", bg="gray")
+            lab142.place(x=220, y=160)
+            lab143 = Label(f4, text="20-january-1999", fg="black", bg="gray")
+            lab143.place(x=220, y=200)
+            lab144 = Label(f4, text="123456789", fg="black", bg="gray")
+            lab144.place(x=220, y=240)
+            lab145 = Label(f4, text="afghan", fg="black", bg="gray")
+            lab145.place(x=220, y=280)
+            lab146 = Label(f4, text="shop keeper", fg="black", bg="gray")
+            lab146.place(x=220, y=320)
+            lab147 = Label(f4, text="eleven", fg="black", bg="gray")
+            lab147.place(x=220, y=360)
+
+            lab148 = Label(f4, text="=====current address=====", fg="black", bg="gray")
+            lab148.place(x=320, y=40)
+
+            lab149 = Label(f4, text="district :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab149.place(x=370, y=80)
+            lab150 = Label(f4, text="province :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab150.place(x=370, y=120)
+            lab151 = Label(f4, text="city :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab151.place(x=370, y=160)
+            lab152 = Label(f4, text="street :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab152.place(x=370, y=200)
+            lab153 = Label(f4, text="eight", fg="black", bg="gray")
+            lab153.place(x=440, y=80)
+            lab154 = Label(f4, text="kabul", fg="black", bg="gray")
+            lab154.place(x=440, y=120)
+            lab155 = Label(f4, text="kabul", fg="black", bg="gray")
+            lab155.place(x=440, y=160)
+            lab156 = Label(f4, text="two", fg="black", bg="gray")
+            lab156.place(x=440, y=200)
+
+            lab157 = Label(f4, text="=====permanent address=====", fg="black", bg="gray")
+            lab157.place(x=320, y=240)
+
+            lab158 = Label(f4, text="district :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab158.place(x=370, y=280)
+            lab159 = Label(f4, text="province :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab159.place(x=370, y=320)
+            lab160 = Label(f4, text="city :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab160.place(x=370, y=360)
+            lab161 = Label(f4, text="street :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab161.place(x=370, y=200)
+            lab162 = Label(f4, text="eight", fg="black", bg="gray")
+            lab162.place(x=440, y=280)
+            lab163 = Label(f4, text="ningarhar", fg="black", bg="gray")
+            lab163.place(x=440, y=320)
+            lab164 = Label(f4, text="jalalabad", fg="black", bg="gray")
+            lab164.place(x=440, y=360)
+            lab165 = Label(f4, text="three", fg="black", bg="gray")
+            lab165.place(x=440, y=200)
+
+            btn21 = Button(f4, text="EDIT", fg="white", bg="black", height=3, width=10)
+            btn21.place(x=570, y=360)
+            btn22 = Button(f4, text="DELETE", fg="white", bg="black", height=3, width=10)
+            btn22.place(x=670, y=360)
+
+        f3 = Frame(page20, width=1200, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=100, y=150)
+
+        '''lab1=Label(f3, text="SEARCH BY", fg="white", bg="black", width=149, height=2, font=("arial", 10 , "bold"))
+        lab1.place(x=0,y=0)'''
+
+        btn23 = Button(f3, text="INDIVIDUAL TEACHER RECORD", fg="white", bg="black", height=5, width=80)
+        btn23.place(x=0, y=0)
+
+        btn24 = Button(f3, text="CLASSES AND SUBJECTS RECORD", fg="white", bg="black", height=5, width=80)
+        btn24.place(x=625, y=0)
+
+        lab166 = Label(f3, text="TEACHER ID", fg="black", bg="gray", font=("arial", 10, "bold"))
+        lab166.place(x=60, y=250)
+        ent99 = Entry(f3, textvar=var99)
+        ent99.place(x=170, y=250)
+        btn25 = Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=individualteacher_record)
+        btn25.place(x=330, y=245)
+
+        lab167 = Label(f3, text="TEACHER ID", fg="black", bg="gray", font=("arial", 10, "bold"))
+        lab167.place(x=690, y=250)
+        ent100 = Entry(f3, textvar=var100)
+        ent100.place(x=770, y=250)
+        btn26 = Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20)
+        btn26.place(x=920, y=245)
+
+    button21 = Button(root, text="teacher records", width=20, height=5, bd=5, fg="black", bg="#98c4ed", command=btn_21)
+    button21.place(x=300, y=400)
+
+    # ==============================TEACHER ATTANDANCE======================================================
+    def btn_22(self):
+        page22 = Tk()
+        page22.geometry("1350x750")
+        page22.title("TEACHER ATTANDANCE FORM")
+        page22.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(self.page22, text="TEACHER ATTANDANCE RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button22 = Button(root, text="teacher attandance", width=20, height=5, bd=5, fg="black", bg="#98c4ed",
+                      command=btn_22)
+    button22.place(x=470, y=400)
+
+    # ==============================TEACHER TRANSPORT============================================
+    def btn_23(self):
+        page23 = Tk()
+        page23.geometry("1350x750")
+        page23.title("TEACHER TRANSPORT FORM")
+        page23.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(self.page23, text="HTEACHER TRANSPORT RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button23 = Button(root, text="teacher transport", width=20, height=5, bd=5, fg="black", bg="#98c4ed",
+                      command=btn_23)
+    button23.place(x=640, y=400)
+
+    # ==========================TEACHER SALARY RECORDS==========================================
+    def btn_24(self):
+        page24 = Tk()
+        page24.geometry("1350x750")
+        page24.title("TEACHER SALARY FORM")
+        page24.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page24, text="TEACHER SALARY RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        def save_salary():
+            f4 = Frame(self.page24, width=900, height=450, bg="gray", relief=SUNKEN, bd=3)
+            f4.place(x=230, y=150)
+
+            lab168 = Label(f4, text="student id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab168.place(x=40, y=40)
+            lab169 = Label(f4, text="class id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab169.place(x=40, y=80)
+            lab170 = Label(f4, text="admission fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab170.place(x=40, y=120)
+            lab171 = Label(f4, text="uniform :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab171.place(x=40, y=160)
+            lab172 = Label(f4, text="exam fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab172.place(x=40, y=200)
+            lab173 = Label(f4, text="recipt id :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab173.place(x=40, y=240)
+            lab174 = Label(f4, text="tuition fee :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab174.place(x=40, y=280)
+            lab175 = Label(f4, text="session :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab175.place(x=40, y=320)
+            lab176 = Label(f4, text="stationary :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab176.place(x=40, y=360)
+            lab177 = Label(f4, text="fee month :", fg="black", bg="gray", font=("arial", 10, "bold"))
+            lab177.place(x=40, y=360)
+
+            lab178 = Label(f4, text="001 :", fg="black", bg="gray")
+            lab178.place(x=200, y=40)
+            lab179 = Label(f4, text="101:", fg="black", bg="gray")
+            lab179.place(x=200, y=80)
+            lab180 = Label(f4, text="1000 :", fg="black", bg="gray")
+            lab180.place(x=200, y=120)
+            lab181 = Label(f4, text="500 :", fg="black", bg="gray")
+            lab181.place(x=200, y=160)
+            lab182 = Label(f4, text="100 :", fg="black", bg="gray")
+            lab182.place(x=200, y=200)
+            lab183 = Label(f4, text="201 :", fg="black", bg="gray")
+            lab183.place(x=200, y=240)
+            lab184 = Label(f4, text="90000 :", fg="black", bg="gray")
+            lab184.place(x=200, y=280)
+            lab185 = Label(f4, text="morning :", fg="black", bg="gray")
+            lab185.place(x=200, y=320)
+            lab186 = Label(f4, text="500 :", fg="black", bg="gray")
+            lab186.place(x=200, y=360)
+            lab187 = Label(f4, text="10000 :", fg="black", bg="gray")
+            lab187.place(x=200, y=360)
+
+            btn27 = Button(f4, text="EDIT", fg="white", bg="black", height=2, width=20)
+            btn27.place(x=700, y=190)
+            btn28 = Button(f4, text="DELETE", fg="white", bg="black", height=2, width=20)
+            btn28.place(x=700, y=260)
+            btn29 = Button(f4, text="CANCEL", fg="white", bg="black", height=2, width=20)
+            btn29.place(x=700, y=330)
+
+        f3 = Frame(self.page24, width=900, height=60, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=230, y=100)
+
+        btn30 = Button(f3, text="SEARCH", fg="white", bg="black", height=2, width=20, command=save_salary)
+        btn30.place(x=600, y=3)
+        lab188 = Label(f3, text="TEACHER ID :", fg="black", bg="gray")
+        lab188.place(x=70, y=10)
+        ent101 = Entry(f3, textvar=var101)
+        ent101.place(x=190, y=10)
+
+    button24 = Button(root, text="salary records", width=20, height=5, bd=5, fg="black", bg="#98c4ed", command=btn_24)
+    button24.place(x=810, y=400)
+
+
+# ==========================EXAMINATION===========================================================================
+class examinations:
+
+    @staticmethod
+    def btn_8():
+        page8 = Tk()
+        page8.geometry("1350x750")
+        page8.title("EXAMINATION FORM")
+        page8.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page8, text="EXAMINATION")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        f3 = Frame(page8, width=900, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=250, y=150)
+
+        lab195 = Label(f3, text="subject id", bg="gray", fg="black")
+        lab195.place(x=50, y=50)
+        ent108 = Entry(f3, textvar=var108)
+        ent108.place(x=150, y=50)
+
+        lab82 = Label(f3, text="subject name", bg="gray", fg="black")
+        lab82.place(x=50, y=100)
+        ent74 = Entry(f3, textvar=var74)
+        ent74.place(x=150, y=100)
+
+        lab83 = Label(f3, text="student id", bg="gray", fg="black")
+        lab83.place(x=50, y=150)
+        ent75 = Entry(f3, textvar=var75)
+        ent75.place(x=150, y=150)
+
+        lab84 = Label(f3, text="student name", bg="gray", fg="black")
+        lab84.place(x=50, y=200)
+        ent76 = Entry(f3, textvar=var76)
+        ent76.place(x=150, y=200)
+
+        lab85 = Label(f3, text="teacher id", bg="gray", fg="black")
+        lab85.place(x=50, y=250)
+        ent77 = Entry(f3, textvar=var77)
+        ent77.place(x=150, y=250)
+
+        lab196 = Label(f3, text="teacher name", bg="gray", fg="black")
+        lab196.place(x=50, y=300)
+        ent109 = Entry(f3, textvar=var109)
+        ent109.place(x=150, y=300)
+
+        lab197 = Label(f3, text="class id", bg="gray", fg="black")
+        lab197.place(x=50, y=350)
+        ent110 = Entry(f3, textvar=var110)
+        ent110.place(x=150, y=350)
+
+        lab198 = Label(f3, text="total marks", bg="gray", fg="black")
+        lab198.place(x=50, y=400)
+        ent111 = Entry(f3, textvar=var111)
+        ent111.place(x=150, y=400)
+
+        lab86 = Label(f3, text="marks obtained", bg="gray", fg="black")
+        lab86.place(x=500, y=50)
+        ent78 = Entry(f3, textvar=var78)
+        ent78.place(x=650, y=50)
+
+        lab87 = Label(f3, text="total questions", bg="gray", fg="black")
+        lab87.place(x=500, y=100)
+        ent79 = Entry(f3, textvar=var79)
+        ent79.place(x=650, y=100)
+
+        lab89 = Label(f3, text="solved questions", bg="gray", fg="black")
+        lab89.place(x=500, y=150)
+        ent80 = Entry(f3, textvar=var80)
+        ent80.place(x=650, y=150)
+
+        lab90 = Label(f3, text="marks per question", bg="gray", fg="black")
+        lab90.place(x=500, y=200)
+        ent81 = Entry(f3, textvar=var81)
+        ent81.place(x=650, y=200)
+
+        lab199 = Label(f3, text="session", bg="gray", fg="black")
+        lab199.place(x=500, y=250)
+        ent112 = Entry(f3, textvar=var112)
+        ent112.place(x=650, y=250)
+
+        lab200 = Label(f3, text="date", bg="gray", fg="black")
+        lab200.place(x=500, y=300)
+        ent113 = Entry(f3, textvar=var113)
+        ent113.place(x=650, y=300)
+
+        def ex():
+            self.lab195 = ent108.get()
+            self.lab82 = ent74.get()
+            self.lab83 = ent75.get()
+            self.lab84 = ent76.get()
+            self.lab85 = ent77.get()
+            self.lab196 = ent109.get()
+            self.lab197 = ent110.get()
+            self.lab198 = ent111.get()
+            self.lab86 = ent78.get()
+            self.lab87 = ent79.get()
+            self.lab89 = ent80.get()
+            self.lab90 = ent81.get()
+            self.lab199 = ent112.get()
+            self.lab200 = ent113.get()
+
+            sql = "INSERT INTO examination VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+            mycursor.execute(sql, (
+                lab195, lab82, lab83, lab84, lab85, lab196, lab197, lab198, lab86, lab87, lab89, lab90, lab199, lab200))
+            conn.commit()
+            conn.close()
+
+        btn9 = Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2, command=ex)
+        btn9.place(x=700, y=400)
+
+    button8 = Button(f1, text="examination", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_8)
+    button8.place(x=40, y=370)
+
+    # ============================EXAM RECORDS===============================================
+    @staticmethod
+    def btn_25():
+        page26 = Tk()
+        page26.geometry("1350x750")
+        page26.title("EXAM RECORDS FORM")
+        page26.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page26, text="EXAM RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button25 = Button(root, text="exam records", width=20, height=5, bd=5, fg="black", bg="#98c4ed", command=btn_25)
+    button25.place(x=980, y=400)
+
+
+# ===============================SCHOOL LEAVING CERTIFICATE==========================================
+class certificates:
+
+    @staticmethod
+    def btn_9():
+        page9 = Tk()
+        page9.geometry("1350x750")
+        page9.title("SCHOOL LEAVING CERTIFICATE")
+        page9.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page9, text="SCHOOL LEAVING CERTIFICATE")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+        f3 = Frame(page9, width=400, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f3.place(x=200, y=150)
+
+        f4 = Frame(page9, width=400, height=500, bg="gray", relief=SUNKEN, bd=3)
+        f4.place(x=800, y=150)
+
+        lab91 = Label(f3, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+        lab91.place(x=50, y=100)
+        ent82 = Entry(f3, textvar=var82)
+        ent82.place(x=190, y=100)
+
+        lab92 = Label(f3, text="student id", fg="black", bg="gray", compound=LEFT)
+        lab92.place(x=50, y=150)
+        ent83 = Entry(f3, textvar=var83)
+        ent83.place(x=190, y=150)
+
+        lab93 = Label(f3, text="student name", fg="black", bg="gray", compound=LEFT)
+        lab93.place(x=50, y=200)
+        ent84 = Entry(f3, textvar=var84)
+        ent84.place(x=190, y=200)
+
+        lab94 = Label(f3, text="driver name", fg="black", bg="gray", compound=LEFT)
+        lab94.place(x=50, y=250)
+        ent85 = Entry(f3, textvar=var85)
+        ent85.place(x=190, y=250)
+
+        lab95 = Label(f3, text="driver phone", fg="black", bg="gray", compound=LEFT)
+        lab95.place(x=50, y=300)
+        ent86 = Entry(f3, textvar=var86)
+        ent86.place(x=190, y=300)
+
+        lab96 = Label(f3, text="location", fg="black", bg="gray", compound=LEFT)
+        lab96.place(x=50, y=350)
+        ent87 = Entry(f3, textvar=var87)
+        ent87.place(x=190, y=350)
+
+        lab97 = Label(f3, text="session", fg="black", bg="gray", compound=LEFT)
+        lab97.place(x=50, y=400)
+        ent88 = Entry(f3, textvar=var88)
+        ent88.place(x=190, y=400)
+
+        btn1 = Button(f3, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+        btn1.place(x=270, y=440)
+
+        lab98 = Label(f3, text="CURRENT SCHOOL", bg="black", fg="white", font=("arial", 20, "bold"), width=20, height=1)
+        lab98.place(x=20, y=20)
+
+        lab99 = Label(f4, text="PREVIOUS SCHOOL", bg="black", fg="white", font=("arial", 20, "bold"), width=20,
+                      height=1)
+        lab99.place(x=20, y=20)
+
+        lab100 = Label(f4, text="vehicle id", fg="black", bg="gray", compound=LEFT)
+        lab100.place(x=50, y=100)
+        ent89 = Entry(f4, textvar=var89)
+        ent89.place(x=190, y=100)
+
+        lab101 = Label(f4, text="teacher id", fg="black", bg="gray", compound=LEFT)
+        lab101.place(x=50, y=150)
+        ent90 = Entry(f4, textvar=var90)
+        ent90.place(x=190, y=150)
+
+        lab102 = Label(f4, text="teacher name", fg="black", bg="gray", compound=LEFT)
+        lab102.place(x=50, y=200)
+        ent91 = Entry(f4, textvar=var91)
+        ent91.place(x=190, y=200)
+
+        lab103 = Label(f4, text="driver name", fg="black", bg="gray", compound=LEFT)
+        lab103.place(x=50, y=250)
+        ent92 = Entry(f4, textvar=var92)
+        ent92.place(x=190, y=250)
+
+        lab104 = Label(f4, text="driver phone", fg="black", bg="gray", compound=LEFT)
+        lab104.place(x=50, y=300)
+        ent93 = Entry(f4, textvar=var93)
+        ent93.place(x=190, y=300)
+
+        lab105 = Label(f4, text="location", fg="black", bg="gray", compound=LEFT)
+        lab105.place(x=50, y=350)
+        ent94 = Entry(f4, textvar=var94)
+        ent94.place(x=190, y=350)
+
+        lab106 = Label(f4, text="session", fg="black", bg="gray", compound=LEFT)
+        lab106.place(x=50, y=400)
+        ent95 = Entry(f4, textvar=var95)
+        ent95.place(x=190, y=400)
+
+        btn10 = Button(f4, text="SAVE", fg="white", bg="black", bd=1, width=15, height=2)
+        btn10.place(x=270, y=440)
+
+    button9 = Button(f1, text="school leaving certificate", width=20, height=1, fg="black", bg="#98c4ed", bd=3,
+                     command=btn_9)
+    button9.place(x=40, y=410)
+
+    # ====================CERTIFICATE RECORDS=====================================================
+    @staticmethod
+    def btn_20():
+        page19 = Tk()
+        page19.geometry("1350x750")
+        page19.title("CERTIFICATE RECORDS FORM")
+        page19.config(background="#98c4ed")
+
+        labelfont = ('arial', 50, 'bold')
+        widget = Label(page19, text="CERTIFICATE RECORDS")
+        widget.config(bg="gray", fg="black")
+        widget.config(font=labelfont)
+        widget.config(height=1, width=70)
+        widget.pack(expand=NO, fill=NONE)
+
+    button20 = Button(root, text="certificate records", width=20, height=5, bd=5, fg="black", bg="#98c4ed",
+                      command=btn_20)
+    button20.place(x=980, y=250)
+
+
+# =============================SADERA WAREDA======================================================
+def btn_10():
+    page10 = Tk()
+    page10.geometry("1350x750")
+    page10.title("SADERA WAREDA ")
+    page10.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page10, text="SADERA WAREDA")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button10 = Button(f1, text="sadera wareda", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_10)
+button10.place(x=40, y=450)
+
+
+# ==================MINISTRY MEETINGS====================================================
+def btn_11():
+    page11 = Tk()
+    page11.geometry("1350x750")
+    page11.title("MINISTRY MEETINGS")
+    page11.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page11, text="MINISTRY MEETINGS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button11 = Button(f1, text="ministry meetings", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_11)
+button11.place(x=40, y=490)
+
+
+# =========================SCHOOL MEETINGS=========================================
+def btn_12():
+    page12 = Tk()
+    page12.geometry("1350x750")
+    page12.title("SCHOOL MEETINGS")
+    page12.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page12, text="SCHOOL MEETINGS")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button12 = Button(f1, text="school meetings", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_12)
+button12.place(x=40, y=530)
+
+
+# ========================ISLAHE MAKTOOB====================================
+def btn_13():
+    page13 = Tk()
+    page13.geometry("1350x750")
+    page13.title("ISLAHE MAKTOOB")
+    page13.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page13, text="ISLAHE MAKTOOB")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button13 = Button(f1, text="islahe maktoob", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_13)
+button13.place(x=40, y=570)
+
+
+# =============================BARASI HAYAT==============================================
+def btn_14():
+    page14 = Tk()
+    page14.geometry("1350x750")
+    page14.title("BARASI HAYAT")
+    page14.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page14, text="BARASI HAYAT")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button14 = Button(f1, text="barasi hayat", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_14)
+button14.place(x=40, y=610)
+
+
+# =============================LIBRARY================================================
+def btn_15():
+    page29 = Tk()
+    page29.geometry("1350x750")
+    page29.title("LIBRARY")
+    page29.config(background="#98c4ed")
+
+    labelfont = ('arial', 50, 'bold')
+    widget = Label(page29, text="LIBRARY")
+    widget.config(bg="gray", fg="black")
+    widget.config(font=labelfont)
+    widget.config(height=1, width=70)
+    widget.pack(expand=NO, fill=NONE)
+
+
+button15 = Button(f1, text="library", width=20, height=1, fg="black", bg="#98c4ed", bd=3, command=btn_15)
+button15.place(x=40, y=650)
+
+# ==========================MAIN MENU BUTTON===============================================
+
+root.mainloop()
